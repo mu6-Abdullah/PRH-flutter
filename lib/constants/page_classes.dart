@@ -1,3 +1,16 @@
+class Profile{
+  int id;
+  String name;
+  String specialization;
+  String address;
+  String phone;
+  String email;
+  String description;
+  String picture; //url to picture
+  Profile({this.name, this.specialization, this.address, this.phone, this.email, this.description, this.picture});
+}
+//Profile(name: , specialization: , address: , phone: , email: , description: , picture: );
+
 var pageTitlesList = [
   'Medical Terms in Punjabi Translation',
   'How to Report...',
