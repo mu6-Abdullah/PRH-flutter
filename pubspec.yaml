@@ -49,6 +49,7 @@ flutter:
    - assets/alarm_icon.png
    - assets/canada_flag.png
    - assets/sylogo.png
+   - assets/grey_circle.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
