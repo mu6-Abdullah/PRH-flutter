@@ -20,6 +20,7 @@ class _PsychologistsState extends State<PsychologistsPage> {
   ];
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context).copyWith(dividerColor: Colors.transparent);
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -54,106 +55,107 @@ class _PsychologistsState extends State<PsychologistsPage> {
               delegate: SliverChildBuilderDelegate(
                     (BuildContext context, int index){
                   return Container(
+                    // padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
                     padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                     child: Card(
                       color: CustomColors.cardBlue,
+
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20.0),
                       ),
-                      child: InkWell(
-                        borderRadius: BorderRadius.circular(20.0),
-                        splashColor: Colors.blue[200],
-                        onTap: (){},
-                        child: Container(
-                            width: 125,
-                            height: 150,
-                            child: Column(
-                              children: [
-                                Row(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Container(
+                                padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
+                                // padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+                                child: Image(
+                                  image: AssetImage(psychologistProfiles[index].picture),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    Container(
-                                      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-                                      child: Image(
-                                        image: AssetImage(psychologistProfiles[index].picture),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      psychologistProfiles[index].name,
+                                      style: TextStyle(
+                                          fontFamily: 'Montserrat',
+                                          fontSize: 22,
+                                          letterSpacing: 1.5,
+                                          color: CustomColors.cardTextBlue,
+                                          fontWeight: FontWeight.w500
                                       ),
                                     ),
                                     SizedBox(
-                                      width: 5,
+                                      height: 5,
                                     ),
-                                    Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          SizedBox(
-                                            height: 5,
-                                          ),
-                                          Text(
-                                            psychologistProfiles[index].name,
-                                            style: TextStyle(
-                                                fontFamily: 'Montserrat',
-                                                fontSize: 22,
-                                                letterSpacing: 1.5,
-                                                color: CustomColors.cardTextBlue,
-                                                fontWeight: FontWeight.w500
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            height: 5,
-                                          ),
-                                          Text(
-                                            psychologistProfiles[index].specialization,
-                                            style: TextStyle(
-                                                fontFamily: 'Montserrat',
-                                                fontSize: 14,
-                                                letterSpacing: 1,
-                                                color: Colors.black,
-                                                fontWeight: FontWeight.w500
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            height: 5,
-                                          ),
-                                          Text(
-                                            psychologistProfiles[index].address,
-                                            textAlign: TextAlign.left,
-                                            style: TextStyle(
-                                                fontFamily: 'Montserrat',
-                                                fontSize: 14,
-                                                letterSpacing: 1,
-                                                color: CustomColors.textCharcoalGrey,
-                                                fontWeight: FontWeight.w500
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            height: 5,
-                                          ),
-                                          Row(
-                                              children: <Widget>[
-                                                Icon(
-                                                  Icons.location_on_rounded,
-                                                  color: CustomColors.cardTextBlue,
-                                                ),
-                                                SizedBox(width: 5),
-                                                Icon(Icons.email,
-                                                  color: CustomColors.cardTextBlue,),
-                                                SizedBox(width: 5),
-                                                Icon(Icons.local_phone_rounded,
-                                                  color: CustomColors.cardTextBlue,),
-                                                SizedBox(width: 100),
-
-                                              ]
-                                          )
-                                        ]
-                                    )
-                                  ],
-                                ),
-                                IconButton(
-                                    color: CustomColors.textCharcoalGrey,
-                                    icon: Icon(Icons.arrow_drop_down),
-                                    onPressed: (){}
-                                ),
+                                    Text(
+                                      psychologistProfiles[index].specialization,
+                                      style: TextStyle(
+                                          fontFamily: 'Montserrat',
+                                          fontSize: 14,
+                                          letterSpacing: 1,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w500
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      psychologistProfiles[index].address,
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                          fontFamily: 'Montserrat',
+                                          fontSize: 14,
+                                          letterSpacing: 1,
+                                          color: CustomColors.textCharcoalGrey,
+                                          fontWeight: FontWeight.w500
+                                      ),
+                                    ),
+                                  ]
+                              )
+                            ],
+                          ),
+                          Theme(
+                            data:theme,
+                            child: ExpansionTile(
+                              title: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: <Widget>[
+                                    SizedBox(width: 90),
+                                    Icon(
+                                      Icons.location_on_rounded,
+                                      color: CustomColors.cardTextBlue,
+                                    ),
+                                    SizedBox(width: 30),
+                                    Icon(Icons.email,
+                                      color: CustomColors.cardTextBlue,),
+                                    SizedBox(width: 30),
+                                    Icon(Icons.local_phone_rounded,
+                                      color: CustomColors.cardTextBlue,),
+                                    SizedBox(width: 30),
+                                  ]
+                              ),
+                              children: <Widget>[
+                                Text('More information here')
                               ],
-                            )
-                        ),
+                            ),
+                          ),
+                          // IconButton(
+                          //     color: CustomColors.textCharcoalGrey,
+                          //     icon: Icon(Icons.arrow_drop_down),
+                          //     onPressed: (){}
+                          // ),
+                        ],
                       ),
                     ),
                   );
