@@ -21,12 +21,30 @@ class _MedicalProfessionalsPageState extends State<MedicalProfessionalsPage> {
         backgroundColor: Colors.white,
         body: CustomScrollView(
           slivers: <Widget>[
-            SliverAppBar(
-              backgroundColor: CustomColors.mainOrange,
-              pinned: true,
-              title: Text(
-                  'Medical Professionals'
+            SliverToBoxAdapter(
+              child: Container(
+                height: 10,
               ),
+            ),
+            SliverAppBar(
+              centerTitle: true,
+              title: Text(
+                'Medical Professionals',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Montserrat',
+                ),
+              ),
+              actions: <Widget>[
+                IconButton(
+                  icon: Icon(Icons.menu),
+                  onPressed: (){},
+                )
+              ],
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50.0)
+              ),
+              backgroundColor: CustomColors.mainOrange,
             ),
             SliverList(
               delegate: SliverChildBuilderDelegate(
