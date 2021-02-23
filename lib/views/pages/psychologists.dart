@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_one/constants/page_classes.dart';
 import 'package:flutter_one/constants/theme_data.dart';
@@ -16,7 +17,7 @@ class _PsychologistsState extends State<PsychologistsPage> {
     Profile(name: 'Jasbir Grewal', specialization: 'Registered Prov. Psychologist' , address: '2307 90b St SW', phone: '587 852-5456', email:'null' , description: 'Anxiety, Depression, Trauma and PTSD', picture:'assets/grey_circle.png' ),
     Profile(name: 'Rupinder Bains', specialization: 'Psychologist', address: 'null' , phone: '587 906-1467', email: 'null', description: 'Self Esteem, anxiety, Stress', picture: 'assets/grey_circle.png'),
     Profile(name: 'Ajay Pandhi', specialization: 'Psychologist' , address: '75St 105 Ave NW' , phone: '866 301-4736', email: 'null', description: 'Trauma and PTSD, codependency, Relationship Issues' , picture: 'assets/grey_circle.png'),
-    Profile(name: 'REACH Services', specialization: 'Psychological Services', address: ' 12547 129 St NW', phone: '587 400-2328', email:'null' , description: 'Offers psychological services', picture: 'assets/grey_circle.png'),
+    Profile(name: 'REACH Services', specialization: 'Psychological Services', address: '12547 129 St NW', phone: '587 400-2328', email:'null' , description: 'Offers psychological services', picture: 'assets/grey_circle.png'),
   ];
   @override
   Widget build(BuildContext context) {
@@ -59,7 +60,6 @@ class _PsychologistsState extends State<PsychologistsPage> {
                     padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                     child: Card(
                       color: CustomColors.cardBlue,
-
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20.0),
                       ),
@@ -146,7 +146,31 @@ class _PsychologistsState extends State<PsychologistsPage> {
                                   ]
                               ),
                               children: <Widget>[
-                                Text('More information here')
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: CustomColors.lighterCardtextBlue,
+                                    borderRadius: BorderRadius.circular(20.0)
+                                    
+                                  ),
+                                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                                  margin: EdgeInsets.fromLTRB(5, 10, 5, 30),
+                                  // margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 5),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                          'Specializing in ' + psychologistProfiles[index].description,
+                                          style: TextStyle(
+                                              fontFamily: 'Montserrat',
+                                              fontSize: 14,
+                                              letterSpacing: 0.5,
+                                              color: CustomColors.textCharcoalGrey,
+                                              fontWeight: FontWeight.w500
+                                          ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               ],
                             ),
                           ),
