@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_one/constants/page_classes.dart';
 import 'package:flutter_one/constants/theme_data.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:maps_launcher/maps_launcher.dart';
 class DomesticViolenceSupportsPage extends StatefulWidget {
   @override
   _DomesticViolenceSupportsPageState createState() => _DomesticViolenceSupportsPageState();
@@ -118,7 +119,7 @@ class _DomesticViolenceSupportsPageState extends State<DomesticViolenceSupportsP
                                     SizedBox(
                                       height: 5,
                                     ),
-                                    Text(
+                                    domesticViolenceSupportsList[index].address != 'null' ? Text(
                                       domesticViolenceSupportsList[index].address,
                                       textAlign: TextAlign.left,
                                       style: TextStyle(
@@ -128,7 +129,7 @@ class _DomesticViolenceSupportsPageState extends State<DomesticViolenceSupportsP
                                           color: CustomColors.textCharcoalGrey,
                                           fontWeight: FontWeight.w500
                                       ),
-                                    ),
+                                    ): SizedBox(height: 0),
                                   ]
                               )
                             ],
@@ -140,16 +141,18 @@ class _DomesticViolenceSupportsPageState extends State<DomesticViolenceSupportsP
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: <Widget>[
                                     SizedBox(width: 90),
-                                    Icon(
+                                    domesticViolenceSupportsList[index].address != 'null' ? Icon(
                                       Icons.location_on_rounded,
                                       color: CustomColors.cardTextBlue,
-                                    ),
-                                    SizedBox(width: 30),
-                                    Icon(Icons.email,
-                                      color: CustomColors.cardTextBlue,),
-                                    SizedBox(width: 30),
-                                    Icon(Icons.local_phone_rounded,
-                                      color: CustomColors.cardTextBlue,),
+                                    ): SizedBox(width: 0,),
+                                    domesticViolenceSupportsList[index].address != 'null' ? SizedBox(width: 30) : SizedBox(width: 0,),
+                                    domesticViolenceSupportsList[index].email != 'null' ? Icon(Icons.email,
+                                      color: CustomColors.cardTextBlue,
+                                    ) : SizedBox(width: 0),
+                                    domesticViolenceSupportsList[index].email != 'null' ? SizedBox(width: 30) : SizedBox(width: 0,),
+                                    domesticViolenceSupportsList[index].phone != 'null' ? Icon(Icons.local_phone_rounded,
+                                      color: CustomColors.cardTextBlue,
+                                    ) : SizedBox(width: 0,),
                                     SizedBox(width: 30),
                                   ]
                               ),
@@ -168,7 +171,6 @@ class _DomesticViolenceSupportsPageState extends State<DomesticViolenceSupportsP
                                     children: <Widget>[
                                       Text(
                                         'Specializing in ' + domesticViolenceSupportsList[index].description,
-                                        textAlign: TextAlign.start,
                                         style: TextStyle(
                                             fontFamily: 'Montserrat',
                                             fontSize: 14,
@@ -177,29 +179,60 @@ class _DomesticViolenceSupportsPageState extends State<DomesticViolenceSupportsP
                                             fontWeight: FontWeight.w500
                                         ),
                                       ),
-                                      Row(
+                                      domesticViolenceSupportsList[index].address != 'null' ? Row(
                                         children: <Widget>[
-                                          IconButton(
-                                            icon: Icon(Icons.location_on_rounded),
-                                            onPressed: null,
+                                          RawMaterialButton(
+                                            constraints: BoxConstraints(
+                                                minWidth: 50
+                                            ) ,
+                                            fillColor: CustomColors.lighterCardtextBlue,
+                                            shape: CircleBorder(),
+                                            padding: EdgeInsets.all(6.0),
+                                            child: Icon(
+                                              Icons.location_on_rounded,
+                                              color: CustomColors.cardTextBlue,
+                                            ),
+                                            onPressed: () => MapsLauncher.launchQuery(domesticViolenceSupportsList[index].address + ' Edmonton AB'),
                                           ),
                                           Text(domesticViolenceSupportsList[index].address),
                                         ],
-                                      ),
-                                      Row(
+                                      ): SizedBox(height: 0),
+                                      domesticViolenceSupportsList[index].email != 'null' ? Row(
                                         children: <Widget>[
-                                          IconButton(
-                                            icon: Icon(Icons.email),
-                                            onPressed: null,
+                                          RawMaterialButton(
+                                            constraints: BoxConstraints(
+                                                minWidth: 50
+                                            ) ,
+                                            fillColor: CustomColors.lighterCardtextBlue,
+                                            shape: CircleBorder(),
+                                            padding: EdgeInsets.all(6.0),
+                                            child: Icon(
+                                              Icons.email,
+                                              color: CustomColors.cardTextBlue,
+                                            ),
+                                            onPressed: (){
+                                              launchURL('mailto:'+domesticViolenceSupportsList[index].email);
+                                            },
                                           ),
                                           Text(domesticViolenceSupportsList[index].email),
                                         ],
-                                      ),
+                                      ): SizedBox(height: 0),
                                       Row(
                                         children: <Widget>[
-                                          IconButton(
-                                            icon: Icon(Icons.local_phone_rounded),
-                                            onPressed: null,
+                                          RawMaterialButton(
+                                              constraints: BoxConstraints(
+                                                  minWidth: 50
+                                              ) ,
+                                              child: Icon(
+                                                Icons.local_phone_rounded,
+                                                color: CustomColors.cardTextBlue,
+                                              ),
+                                              shape: CircleBorder(),
+                                              padding: EdgeInsets.all(6.0),
+                                              fillColor: CustomColors.lighterCardtextBlue,
+                                              onPressed: () {
+                                                launchURL('tel:'+domesticViolenceSupportsList[index].phone);
+                                              }
                                           ),
                                           Text(domesticViolenceSupportsList[index].phone),
                                         ],

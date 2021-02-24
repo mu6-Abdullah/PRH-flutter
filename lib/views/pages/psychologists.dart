@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_one/constants/page_classes.dart';
 import 'package:flutter_one/constants/theme_data.dart';
 import 'package:url_launcher/url_launcher.dart';
-
+import 'package:maps_launcher/maps_launcher.dart';
 
 class PsychologistsPage extends StatefulWidget {
   @override
@@ -17,7 +17,7 @@ class _PsychologistsState extends State<PsychologistsPage> {
     Profile(name: 'Jasbir Grewal', specialization: 'Registered Prov. Psychologist' , address: '2307 90b St SW', phone: '587 852 5456', email:'null' , description: 'Anxiety, Depression, Trauma and PTSD', picture:'assets/grey_circle.png' ),
     Profile(name: 'Rupinder Bains', specialization: 'Psychologist', address: 'null' , phone: '587 906 1467', email: 'null', description: 'Self Esteem, anxiety, Stress', picture: 'assets/grey_circle.png'),
     Profile(name: 'Ajay Pandhi', specialization: 'Psychologist' , address: '75St 105 Ave NW' , phone: '866 301 4736', email: 'null', description: 'Trauma and PTSD, codependency, Relationship Issues' , picture: 'assets/grey_circle.png'),
-    Profile(name: 'REACH Services', specialization: 'Psychological Services', address: '12547 129 St NW', phone: '587 400 2328', email:'null' , description: 'Offers psychological services', picture: 'assets/grey_circle.png'),
+    Profile(name: 'REACH Services', specialization: 'Psychological Services', address: '12547 129 St NW', phone: '587 400 2328', email:'mu6@ualberta.ca' , description: 'Offers psychological services', picture: 'assets/grey_circle.png'),
   ];
   @override
   Widget build(BuildContext context) {
@@ -187,17 +187,35 @@ class _PsychologistsState extends State<PsychologistsPage> {
                                       ),
                                       psychologistProfiles[index].address != 'null' ? Row(
                                         children: <Widget>[
-                                          IconButton(
-                                              icon: Icon(Icons.location_on_rounded),
-                                              onPressed: null,
+                                          RawMaterialButton(
+                                              constraints: BoxConstraints(
+                                                  minWidth: 50
+                                              ) ,
+                                              fillColor: CustomColors.lighterCardtextBlue,
+                                              shape: CircleBorder(),
+                                              padding: EdgeInsets.all(6.0),
+                                              child: Icon(
+                                                  Icons.location_on_rounded,
+                                                  color: CustomColors.cardTextBlue,
+                                              ),
+                                              onPressed: () => MapsLauncher.launchQuery(psychologistProfiles[index].address + ' Edmonton AB'),
                                           ),
                                           Text(psychologistProfiles[index].address),
                                         ],
                                       ): SizedBox(height: 0),
                                       psychologistProfiles[index].email != 'null' ? Row(
                                         children: <Widget>[
-                                          IconButton(
-                                            icon: Icon(Icons.email),
+                                          RawMaterialButton(
+                                            constraints: BoxConstraints(
+                                              minWidth: 50
+                                            ) ,
+                                            fillColor: CustomColors.lighterCardtextBlue,
+                                            shape: CircleBorder(),
+                                            padding: EdgeInsets.all(6.0),
+                                            child: Icon(
+                                                Icons.email,
+                                                color: CustomColors.cardTextBlue,
+                                            ),
                                             onPressed: (){
                                               launchURL('mailto:'+psychologistProfiles[index].email);
                                             },
@@ -207,11 +225,20 @@ class _PsychologistsState extends State<PsychologistsPage> {
                                       ): SizedBox(height: 0),
                                       Row(
                                         children: <Widget>[
-                                          IconButton(
-                                            icon: Icon(Icons.local_phone_rounded),
-                                            onPressed: () {
-                                              launchURL('tel:'+psychologistProfiles[index].phone);
-                                            }
+                                          RawMaterialButton(
+                                              constraints: BoxConstraints(
+                                                  minWidth: 50
+                                              ) ,
+                                              child: Icon(
+                                                Icons.local_phone_rounded,
+                                                color: CustomColors.cardTextBlue,
+                                              ),
+                                              shape: CircleBorder(),
+                                              padding: EdgeInsets.all(6.0),
+                                              fillColor: CustomColors.lighterCardtextBlue,
+                                              onPressed: () {
+                                                launchURL('tel:'+psychologistProfiles[index].phone);
+                                              }
                                           ),
                                           Text(psychologistProfiles[index].phone),
                                         ],

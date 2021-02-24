@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_one/constants/page_classes.dart';
 import 'package:flutter_one/constants/theme_data.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:maps_launcher/maps_launcher.dart';
 class MedicalProfessionalsPage extends StatefulWidget {
   @override
   _MedicalProfessionalsPageState createState() => _MedicalProfessionalsPageState();
@@ -108,7 +109,7 @@ class _MedicalProfessionalsPageState extends State<MedicalProfessionalsPage> {
                                       SizedBox(
                                         height: 5,
                                       ),
-                                      Text(
+                                      mpProfileList[index].address != 'null' ? Text(
                                         mpProfileList[index].address,
                                         textAlign: TextAlign.left,
                                         style: TextStyle(
@@ -118,7 +119,7 @@ class _MedicalProfessionalsPageState extends State<MedicalProfessionalsPage> {
                                             color: CustomColors.textCharcoalGrey,
                                             fontWeight: FontWeight.w500
                                         ),
-                                      ),
+                                      ): SizedBox(height: 0),
                                     ]
                                 )
                               ],
@@ -130,16 +131,18 @@ class _MedicalProfessionalsPageState extends State<MedicalProfessionalsPage> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: <Widget>[
                                       SizedBox(width: 90),
-                                      Icon(
+                                      mpProfileList[index].address != 'null' ? Icon(
                                         Icons.location_on_rounded,
                                         color: CustomColors.cardTextBlue,
-                                      ),
-                                      SizedBox(width: 30),
-                                      Icon(Icons.email,
-                                        color: CustomColors.cardTextBlue,),
-                                      SizedBox(width: 30),
-                                      Icon(Icons.local_phone_rounded,
-                                        color: CustomColors.cardTextBlue,),
+                                      ): SizedBox(width: 0,),
+                                      mpProfileList[index].address != 'null' ? SizedBox(width: 30) : SizedBox(width: 0,),
+                                      mpProfileList[index].email != 'null' ? Icon(Icons.email,
+                                        color: CustomColors.cardTextBlue,
+                                      ) : SizedBox(width: 0),
+                                      mpProfileList[index].email != 'null' ? SizedBox(width: 30) : SizedBox(width: 0,),
+                                      mpProfileList[index].phone != 'null' ? Icon(Icons.local_phone_rounded,
+                                        color: CustomColors.cardTextBlue,
+                                      ) : SizedBox(width: 0,),
                                       SizedBox(width: 30),
                                     ]
                                 ),
@@ -166,45 +169,70 @@ class _MedicalProfessionalsPageState extends State<MedicalProfessionalsPage> {
                                               fontWeight: FontWeight.w500
                                           ),
                                         ),
-                                        Row(
+                                        mpProfileList[index].address != 'null' ? Row(
                                           children: <Widget>[
-                                            IconButton(
-                                              icon: Icon(Icons.location_on_rounded),
-                                              onPressed: null,
+                                            RawMaterialButton(
+                                              constraints: BoxConstraints(
+                                                  minWidth: 50
+                                              ) ,
+                                              fillColor: CustomColors.lighterCardtextBlue,
+                                              shape: CircleBorder(),
+                                              padding: EdgeInsets.all(6.0),
+                                              child: Icon(
+                                                Icons.location_on_rounded,
+                                                color: CustomColors.cardTextBlue,
+                                              ),
+                                              onPressed: () => MapsLauncher.launchQuery(mpProfileList[index].address + ' Edmonton AB'),
                                             ),
                                             Text(mpProfileList[index].address),
                                           ],
-                                        ),
-                                        Row(
+                                        ): SizedBox(height: 0),
+                                        mpProfileList[index].email != 'null' ? Row(
                                           children: <Widget>[
-                                            IconButton(
-                                              icon: Icon(Icons.email),
-                                              onPressed: null,
+                                            RawMaterialButton(
+                                              constraints: BoxConstraints(
+                                                  minWidth: 50
+                                              ) ,
+                                              fillColor: CustomColors.lighterCardtextBlue,
+                                              shape: CircleBorder(),
+                                              padding: EdgeInsets.all(6.0),
+                                              child: Icon(
+                                                Icons.email,
+                                                color: CustomColors.cardTextBlue,
+                                              ),
+                                              onPressed: (){
+                                                launchURL('mailto:'+mpProfileList[index].email);
+                                              },
                                             ),
                                             Text(mpProfileList[index].email),
                                           ],
-                                        ),
+                                        ): SizedBox(height: 0),
                                         Row(
                                           children: <Widget>[
-                                            IconButton(
-                                              icon: Icon(Icons.local_phone_rounded),
-                                              onPressed: null,
+                                            RawMaterialButton(
+                                                constraints: BoxConstraints(
+                                                    minWidth: 50
+                                                ) ,
+                                                child: Icon(
+                                                  Icons.local_phone_rounded,
+                                                  color: CustomColors.cardTextBlue,
+                                                ),
+                                                shape: CircleBorder(),
+                                                padding: EdgeInsets.all(6.0),
+                                                fillColor: CustomColors.lighterCardtextBlue,
+                                                onPressed: () {
+                                                  launchURL('tel:'+mpProfileList[index].phone);
+                                                }
                                             ),
                                             Text(mpProfileList[index].phone),
                                           ],
                                         ),
-
                                       ],
                                     ),
                                   ),
                                 ],
                               ),
                             ),
-                            // IconButton(
-                            //     color: CustomColors.textCharcoalGrey,
-                            //     icon: Icon(Icons.arrow_drop_down),
-                            //     onPressed: (){}
-                            // ),
                           ],
                         ),
                       ),
