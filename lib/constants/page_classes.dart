@@ -1,3 +1,4 @@
+import 'package:url_launcher/url_launcher.dart';
 class Profile{
   int id;
   String name;
@@ -8,6 +9,13 @@ class Profile{
   String description;
   String picture; //url to picture
   Profile({this.name, this.specialization, this.address, this.phone, this.email, this.description, this.picture});
+}
+void launchURL(command) async {
+  if(await canLaunch(command)){
+    await launch(command);
+  }else{
+    throw 'Could not launch $command';
+  }
 }
 //Profile(name: , specialization: , address: , phone: , email: , description: , picture: );
 

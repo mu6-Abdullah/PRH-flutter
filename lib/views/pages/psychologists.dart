@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_one/constants/page_classes.dart';
 import 'package:flutter_one/constants/theme_data.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 
 
 class PsychologistsPage extends StatefulWidget {
@@ -12,12 +12,12 @@ class PsychologistsPage extends StatefulWidget {
 
 class _PsychologistsState extends State<PsychologistsPage> {
   List<Profile> psychologistProfiles = [
-    Profile(name: 'Bharat Sharma', specialization: 'Registered Psychotherapist', address: '2923 66 St NW', phone: '780 666-7351' , email: 'null', description: 'Addiction,  Anger Management and behavioural Issues', picture: 'assets/grey_circle.png'),
-    Profile(name: 'Harpreet Kaur Gill', specialization: 'Registered Psychologist/ PhD', address: '8215-112 Street Suite 506', phone: '587 401-3154', email: 'null', description: 'Depression, anxiety, relationship issues', picture:'assets/grey_circle.png' ),
-    Profile(name: 'Jasbir Grewal', specialization: 'Registered Prov. Psychologist' , address: '2307 90b St SW', phone: '587 852-5456', email:'null' , description: 'Anxiety, Depression, Trauma and PTSD', picture:'assets/grey_circle.png' ),
-    Profile(name: 'Rupinder Bains', specialization: 'Psychologist', address: 'null' , phone: '587 906-1467', email: 'null', description: 'Self Esteem, anxiety, Stress', picture: 'assets/grey_circle.png'),
-    Profile(name: 'Ajay Pandhi', specialization: 'Psychologist' , address: '75St 105 Ave NW' , phone: '866 301-4736', email: 'null', description: 'Trauma and PTSD, codependency, Relationship Issues' , picture: 'assets/grey_circle.png'),
-    Profile(name: 'REACH Services', specialization: 'Psychological Services', address: '12547 129 St NW', phone: '587 400-2328', email:'null' , description: 'Offers psychological services', picture: 'assets/grey_circle.png'),
+    Profile(name: 'Bharat Sharma', specialization: 'Registered Psychotherapist', address: '2923 66 St NW', phone: '780 666 7351' , email: 'null', description: 'Addiction,  Anger Management and behavioural Issues', picture: 'assets/grey_circle.png'),
+    Profile(name: 'Harpreet Kaur Gill', specialization: 'Registered Psychologist/ PhD', address: '8215-112 Street Suite 506', phone: '587 401 3154', email: 'null', description: 'Depression, anxiety, relationship issues', picture:'assets/grey_circle.png' ),
+    Profile(name: 'Jasbir Grewal', specialization: 'Registered Prov. Psychologist' , address: '2307 90b St SW', phone: '587 852 5456', email:'null' , description: 'Anxiety, Depression, Trauma and PTSD', picture:'assets/grey_circle.png' ),
+    Profile(name: 'Rupinder Bains', specialization: 'Psychologist', address: 'null' , phone: '587 906 1467', email: 'null', description: 'Self Esteem, anxiety, Stress', picture: 'assets/grey_circle.png'),
+    Profile(name: 'Ajay Pandhi', specialization: 'Psychologist' , address: '75St 105 Ave NW' , phone: '866 301 4736', email: 'null', description: 'Trauma and PTSD, codependency, Relationship Issues' , picture: 'assets/grey_circle.png'),
+    Profile(name: 'REACH Services', specialization: 'Psychological Services', address: '12547 129 St NW', phone: '587 400 2328', email:'null' , description: 'Offers psychological services', picture: 'assets/grey_circle.png'),
   ];
   @override
   Widget build(BuildContext context) {
@@ -51,6 +51,21 @@ class _PsychologistsState extends State<PsychologistsPage> {
                   borderRadius: BorderRadius.circular(50.0)
               ),
               backgroundColor: CustomColors.mainOrange,
+            ),
+            SliverToBoxAdapter(
+              child: Container(
+                  padding: EdgeInsets.symmetric(vertical: 25),
+                  child: Center(
+                    child: Text(
+                      'Profiles',
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontFamily: 'Montserrat',
+                          fontWeight: FontWeight.w500
+                      ),
+                    ),
+                  )
+              ),
             ),
             SliverList(
               delegate: SliverChildBuilderDelegate(
@@ -110,7 +125,7 @@ class _PsychologistsState extends State<PsychologistsPage> {
                                     SizedBox(
                                       height: 5,
                                     ),
-                                    Text(
+                                    psychologistProfiles[index].address != 'null' ? Text(
                                       psychologistProfiles[index].address,
                                       textAlign: TextAlign.left,
                                       style: TextStyle(
@@ -120,7 +135,7 @@ class _PsychologistsState extends State<PsychologistsPage> {
                                           color: CustomColors.textCharcoalGrey,
                                           fontWeight: FontWeight.w500
                                       ),
-                                    ),
+                                    ): SizedBox(height: 0),
                                   ]
                               )
                             ],
@@ -132,16 +147,18 @@ class _PsychologistsState extends State<PsychologistsPage> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: <Widget>[
                                     SizedBox(width: 90),
-                                    Icon(
+                                    psychologistProfiles[index].address != 'null' ? Icon(
                                       Icons.location_on_rounded,
                                       color: CustomColors.cardTextBlue,
-                                    ),
-                                    SizedBox(width: 30),
-                                    Icon(Icons.email,
-                                      color: CustomColors.cardTextBlue,),
-                                    SizedBox(width: 30),
-                                    Icon(Icons.local_phone_rounded,
-                                      color: CustomColors.cardTextBlue,),
+                                    ): SizedBox(width: 0,),
+                                    psychologistProfiles[index].address != 'null' ? SizedBox(width: 30) : SizedBox(width: 0,),
+                                    psychologistProfiles[index].email != 'null' ? Icon(Icons.email,
+                                      color: CustomColors.cardTextBlue,
+                                    ) : SizedBox(width: 0),
+                                    psychologistProfiles[index].email != 'null' ? SizedBox(width: 30) : SizedBox(width: 0,),
+                                    psychologistProfiles[index].phone != 'null' ? Icon(Icons.local_phone_rounded,
+                                      color: CustomColors.cardTextBlue,
+                                    ) : SizedBox(width: 0,),
                                     SizedBox(width: 30),
                                   ]
                               ),
@@ -152,21 +169,52 @@ class _PsychologistsState extends State<PsychologistsPage> {
                                     borderRadius: BorderRadius.circular(20.0)
                                     
                                   ),
-                                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                                  margin: EdgeInsets.fromLTRB(5, 10, 5, 30),
+                                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                                  margin: EdgeInsets.fromLTRB(10, 10, 10, 30),
                                   // margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 5),
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
-                                          'Specializing in ' + psychologistProfiles[index].description,
-                                          style: TextStyle(
-                                              fontFamily: 'Montserrat',
-                                              fontSize: 14,
-                                              letterSpacing: 0.5,
-                                              color: CustomColors.textCharcoalGrey,
-                                              fontWeight: FontWeight.w500
+                                        'Specializing in ' + psychologistProfiles[index].description,
+                                        style: TextStyle(
+                                            fontFamily: 'Montserrat',
+                                            fontSize: 14,
+                                            letterSpacing: 0.5,
+                                            color: CustomColors.textCharcoalGrey,
+                                            fontWeight: FontWeight.w500
+                                        ),
+                                      ),
+                                      psychologistProfiles[index].address != 'null' ? Row(
+                                        children: <Widget>[
+                                          IconButton(
+                                              icon: Icon(Icons.location_on_rounded),
+                                              onPressed: null,
                                           ),
+                                          Text(psychologistProfiles[index].address),
+                                        ],
+                                      ): SizedBox(height: 0),
+                                      psychologistProfiles[index].email != 'null' ? Row(
+                                        children: <Widget>[
+                                          IconButton(
+                                            icon: Icon(Icons.email),
+                                            onPressed: (){
+                                              launchURL('mailto:'+psychologistProfiles[index].email);
+                                            },
+                                          ),
+                                          Text(psychologistProfiles[index].email),
+                                        ],
+                                      ): SizedBox(height: 0),
+                                      Row(
+                                        children: <Widget>[
+                                          IconButton(
+                                            icon: Icon(Icons.local_phone_rounded),
+                                            onPressed: () {
+                                              launchURL('tel:'+psychologistProfiles[index].phone);
+                                            }
+                                          ),
+                                          Text(psychologistProfiles[index].phone),
+                                        ],
                                       ),
                                     ],
                                   ),
@@ -174,11 +222,6 @@ class _PsychologistsState extends State<PsychologistsPage> {
                               ],
                             ),
                           ),
-                          // IconButton(
-                          //     color: CustomColors.textCharcoalGrey,
-                          //     icon: Icon(Icons.arrow_drop_down),
-                          //     onPressed: (){}
-                          // ),
                         ],
                       ),
                     ),
