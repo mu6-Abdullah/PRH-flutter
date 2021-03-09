@@ -3,19 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_one/constants/page_classes.dart';
 import 'package:flutter_one/constants/theme_data.dart';
 import 'package:maps_launcher/maps_launcher.dart';
-
-class CounsellingServicesPage extends StatefulWidget {
+class LegalAssistancePage extends StatefulWidget {
   @override
-  _CounsellingServicesPageState createState() => _CounsellingServicesPageState();
+  _LegalAssistancePageState createState() => _LegalAssistancePageState();
 }
 
-class _CounsellingServicesPageState extends State<CounsellingServicesPage> {
-  List<Profile> counsellingServicesProfiles = [
-    Profile(name: 'Momentum', specialization: 'Walk-In Counselling', address: '', phone: '780 757-0900' , email: 'null', description: 'Short term, walk-in counselling, on a pay-what-you-can basis. Offers online and over the phone during the pandemic', picture: 'assets/grey_circle.png'),
-    Profile(name: 'Drop-In YEG', specialization: 'Drop In Counselling', address: '', phone: '780 423-2831', email: 'null', description: 'Offered via the Family Centre. Free, single session drop-in counselling located at multiple locations across the city. Available over the phone and video chat', picture:'assets/grey_circle.png' ),
-    Profile(name: 'Firefly', specialization: 'Online Therapy and Counselling', address: '', phone: '587 400-0302' , email: 'null', description: 'Provides online therapy and online counselling for individuals who have experienced or are experiencing trauma or abuse. This service is not free', picture: 'assets/grey_circle.png'),
-    Profile(name: 'YWCA Edmonton', specialization: 'Affordable Counselling', address: '', phone: '780 423-9922', email: 'null', description: 'Provides affordable counselling with subsidies available that can cover up to 99% of the cost. Does have multilingual services', picture:'assets/grey_circle.png' ),
-
+class _LegalAssistancePageState extends State<LegalAssistancePage> {
+  List<Profile> legalAssistanceProfiles = [
+    Profile(name: 'ILA Project' , specialization: 'Legal Advice', address: '' ,phone: '780 784-2213' , email: 'null' , description: 'Provides legal assistance to survivorsProvides up to 4 hours worth offree legal advice' , picture: 'assets/grey_circle.png' ),
+    Profile(name: 'Legal Aid Alberta', specialization: 'Offer legal assistance' , address: '',phone: '866-845-3425' , email:'null' , description: 'Assists Albertans facing legal issues by helping them navigate their journey through the justice system', picture: 'assets/grey_circle.png' ),
+    Profile(name: 'ECLC', specialization: 'Provide free legal information' , address: '',phone:'780 702-1725' , email: 'null' , description: 'Provides free legal information and advice to low to moderate income people in the Edmonton area', picture: 'assets/grey_circle.png' ),
+    Profile(name: 'OCYA', specialization: 'Help people receiving services', address: '',phone: '800-661-3446' , email: 'ca.information@OCYA.alberta.ca', description: 'The OCYA is all about helping young people who are receiving services. Whether this be through advocating, arranging for legal representation, or engaging the community on issues that matter to young people, the OCYA cares about the people they serve' , picture: 'assets/grey_circle.png' ),
+    Profile(name: 'Liberty Law', specialization: 'Offers legal consultation' , address: '',phone: '780 784-7500' , email: 'null' , description: 'Offers free consultation for legal action', picture: 'assets/grey_circle.png' ),
   ];
   @override
   Widget build(BuildContext context) {
@@ -33,7 +32,7 @@ class _CounsellingServicesPageState extends State<CounsellingServicesPage> {
             SliverAppBar(
               centerTitle: true,
               title: Text(
-                'Counselling Services',
+                'Domestic Violence Supports',
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Montserrat',
@@ -85,7 +84,7 @@ class _CounsellingServicesPageState extends State<CounsellingServicesPage> {
                                 padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
                                 // padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
                                 child: Image(
-                                  image: AssetImage(counsellingServicesProfiles[index].picture),
+                                  image: AssetImage(legalAssistanceProfiles[index].picture),
                                 ),
                               ),
                               SizedBox(
@@ -98,7 +97,7 @@ class _CounsellingServicesPageState extends State<CounsellingServicesPage> {
                                       height: 5,
                                     ),
                                     Text(
-                                      counsellingServicesProfiles[index].name,
+                                      legalAssistanceProfiles[index].name,
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
                                           fontSize: 22,
@@ -111,7 +110,7 @@ class _CounsellingServicesPageState extends State<CounsellingServicesPage> {
                                       height: 5,
                                     ),
                                     Text(
-                                      counsellingServicesProfiles[index].specialization,
+                                      legalAssistanceProfiles[index].specialization,
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
                                           fontSize: 14,
@@ -123,8 +122,8 @@ class _CounsellingServicesPageState extends State<CounsellingServicesPage> {
                                     SizedBox(
                                       height: 5,
                                     ),
-                                    counsellingServicesProfiles[index].address != '' ? Text(
-                                      counsellingServicesProfiles[index].address,
+                                    legalAssistanceProfiles[index].address != '' ? Text(
+                                      legalAssistanceProfiles[index].address,
                                       textAlign: TextAlign.left,
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
@@ -145,16 +144,16 @@ class _CounsellingServicesPageState extends State<CounsellingServicesPage> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: <Widget>[
                                     SizedBox(width: 90),
-                                    counsellingServicesProfiles[index].address != '' ? Icon(
+                                    legalAssistanceProfiles[index].address != '' ? Icon(
                                       Icons.location_on_rounded,
                                       color: CustomColors.cardTextBlue,
                                     ): SizedBox(width: 0,),
-                                    counsellingServicesProfiles[index].address != '' ? SizedBox(width: 30) : SizedBox(width: 0,),
-                                    counsellingServicesProfiles[index].email != 'null' ? Icon(Icons.email,
+                                    legalAssistanceProfiles[index].address != '' ? SizedBox(width: 30) : SizedBox(width: 0,),
+                                    legalAssistanceProfiles[index].email != 'null' ? Icon(Icons.email,
                                       color: CustomColors.cardTextBlue,
                                     ) : SizedBox(width: 0),
-                                    counsellingServicesProfiles[index].email != 'null' ? SizedBox(width: 30) : SizedBox(width: 0,),
-                                    counsellingServicesProfiles[index].phone != 'null' ? Icon(Icons.local_phone_rounded,
+                                    legalAssistanceProfiles[index].email != 'null' ? SizedBox(width: 30) : SizedBox(width: 0,),
+                                    legalAssistanceProfiles[index].phone != 'null' ? Icon(Icons.local_phone_rounded,
                                       color: CustomColors.cardTextBlue,
                                     ) : SizedBox(width: 0,),
                                     SizedBox(width: 30),
@@ -174,7 +173,7 @@ class _CounsellingServicesPageState extends State<CounsellingServicesPage> {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
-                                        'Specializing in ' + counsellingServicesProfiles[index].description,
+                                        'Specializing in ' + legalAssistanceProfiles[index].description,
                                         style: TextStyle(
                                             fontFamily: 'Montserrat',
                                             fontSize: 14,
@@ -183,7 +182,7 @@ class _CounsellingServicesPageState extends State<CounsellingServicesPage> {
                                             fontWeight: FontWeight.w500
                                         ),
                                       ),
-                                      counsellingServicesProfiles[index].address != '' ? Row(
+                                      legalAssistanceProfiles[index].address != '' ? Row(
                                         children: <Widget>[
                                           RawMaterialButton(
                                             constraints: BoxConstraints(
@@ -196,12 +195,12 @@ class _CounsellingServicesPageState extends State<CounsellingServicesPage> {
                                               Icons.location_on_rounded,
                                               color: CustomColors.cardTextBlue,
                                             ),
-                                            onPressed: () => MapsLauncher.launchQuery(counsellingServicesProfiles[index].address + ' Edmonton AB'),
+                                            onPressed: () => MapsLauncher.launchQuery(legalAssistanceProfiles[index].address + ' Edmonton AB'),
                                           ),
-                                          Text(counsellingServicesProfiles[index].address),
+                                          Text(legalAssistanceProfiles[index].address),
                                         ],
                                       ): SizedBox(height: 0),
-                                      counsellingServicesProfiles[index].email != 'null' ? Row(
+                                      legalAssistanceProfiles[index].email != 'null' ? Row(
                                         children: <Widget>[
                                           RawMaterialButton(
                                             constraints: BoxConstraints(
@@ -215,10 +214,10 @@ class _CounsellingServicesPageState extends State<CounsellingServicesPage> {
                                               color: CustomColors.cardTextBlue,
                                             ),
                                             onPressed: (){
-                                              launchURL('mailto:'+counsellingServicesProfiles[index].email);
+                                              launchURL('mailto:'+legalAssistanceProfiles[index].email);
                                             },
                                           ),
-                                          Text(counsellingServicesProfiles[index].email),
+                                          Text(legalAssistanceProfiles[index].email),
                                         ],
                                       ): SizedBox(height: 0),
                                       Row(
@@ -235,10 +234,10 @@ class _CounsellingServicesPageState extends State<CounsellingServicesPage> {
                                               padding: EdgeInsets.all(6.0),
                                               fillColor: CustomColors.lighterCardtextBlue,
                                               onPressed: () {
-                                                launchURL('tel:'+counsellingServicesProfiles[index].phone);
+                                                launchURL('tel:'+legalAssistanceProfiles[index].phone);
                                               }
                                           ),
-                                          Text(counsellingServicesProfiles[index].phone),
+                                          Text(legalAssistanceProfiles[index].phone),
                                         ],
                                       ),
                                     ],
@@ -252,7 +251,7 @@ class _CounsellingServicesPageState extends State<CounsellingServicesPage> {
                     ),
                   );
                 },
-                childCount: counsellingServicesProfiles.length,
+                childCount: legalAssistanceProfiles.length,
                 semanticIndexOffset: 2,
               ),
             )
