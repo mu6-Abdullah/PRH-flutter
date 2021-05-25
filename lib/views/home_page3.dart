@@ -7,6 +7,7 @@ import 'package:flutter_one/views/pages/domestic_violence_supports.dart';
 import 'package:flutter_one/views/pages/emergency_shelters.dart';
 import 'package:flutter_one/views/pages/legal_assistance.dart';
 import 'package:flutter_one/views/pages/medical_professionals.dart';
+import 'package:flutter_one/views/pages/physical_and_mental_health.dart';
 import 'package:flutter_one/views/pages/psychologists.dart';
 import 'package:flutter_one/views/profile_page.dart';
 import 'package:flutter_one/views/resource_page.dart';
@@ -106,6 +107,7 @@ class _HomePage3State extends State<HomePage3> {
                           child: Center(
                             child: Text(
                                 'Profile',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: CustomColors.textCharcoalGrey,
                                 fontFamily: 'Montserrat',
@@ -139,6 +141,7 @@ class _HomePage3State extends State<HomePage3> {
                           child: Center(
                             child: Text(
                                 'Translate',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 letterSpacing: 2,
                                   color: CustomColors.textCharcoalGrey,
@@ -172,6 +175,7 @@ class _HomePage3State extends State<HomePage3> {
                           child: Center(
                             child: Text(
                               'Definition + Resources',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 letterSpacing: 2,
                                 color: CustomColors.textCharcoalGrey,
@@ -188,16 +192,6 @@ class _HomePage3State extends State<HomePage3> {
                 ],
               ),
             ),
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -225,11 +219,12 @@ class _HomePage3State extends State<HomePage3> {
                           child: Center(
                             child: Text(
                               'Psychologists',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: CustomColors.textCharcoalGrey,
                                 fontFamily: 'Montserrat',
                                 letterSpacing: 2,
-                                fontSize: 14,
+                                fontSize: 13,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -258,11 +253,12 @@ class _HomePage3State extends State<HomePage3> {
                           child: Center(
                             child: Text(
                               'Medical Professionals',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 letterSpacing: 2,
                                 color: CustomColors.textCharcoalGrey,
                                 fontFamily: 'Montserrat',
-                                fontSize: 14,
+                                fontSize: 13,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -291,6 +287,7 @@ class _HomePage3State extends State<HomePage3> {
                           child: Center(
                             child: Text(
                               'Counselling Services',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 letterSpacing: 2,
                                 color: CustomColors.textCharcoalGrey,
@@ -331,6 +328,7 @@ class _HomePage3State extends State<HomePage3> {
                           child: Center(
                             child: Text(
                               'Emergency Shelters',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: CustomColors.textCharcoalGrey,
                                 fontFamily: 'Montserrat',
@@ -364,6 +362,7 @@ class _HomePage3State extends State<HomePage3> {
                           child: Center(
                             child: Text(
                               'Domestic Violence Supports',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 letterSpacing: 2,
                                 color: CustomColors.textCharcoalGrey,
@@ -397,6 +396,7 @@ class _HomePage3State extends State<HomePage3> {
                           child: Center(
                             child: Text(
                               'Legal Assistance',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 letterSpacing: 2,
                                 color: CustomColors.textCharcoalGrey,
@@ -437,6 +437,7 @@ class _HomePage3State extends State<HomePage3> {
                           child: Center(
                             child: Text(
                               'Distress and Crisis Lines',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: CustomColors.textCharcoalGrey,
                                 fontFamily: 'Montserrat',
@@ -462,14 +463,15 @@ class _HomePage3State extends State<HomePage3> {
                         splashColor: Colors.red[200],
                         onTap: (){Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => TranslatePage()));
+                            MaterialPageRoute(builder: (context) => PhysicalAndMentalHealthPage()));
                         },
                         child: Container(
                           width: 100,
                           height: 100,
                           child: Center(
                             child: Text(
-                              'Translate',
+                              'Physical and Mental Health',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 letterSpacing: 2,
                                 color: CustomColors.textCharcoalGrey,
@@ -503,6 +505,7 @@ class _HomePage3State extends State<HomePage3> {
                           child: Center(
                             child: Text(
                               'Definition + Resources',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 letterSpacing: 2,
                                 color: CustomColors.textCharcoalGrey,

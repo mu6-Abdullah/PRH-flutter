@@ -10,6 +10,16 @@ class Profile{
   String picture; //url to picture
   Profile({this.name, this.specialization, this.address, this.phone, this.email, this.description, this.picture});
 }
+
+class Resource{
+  int id;
+  String name;
+  String specialization;
+  String phone;
+  String url;
+  Resource({this.name, this.specialization, this.phone, this.url});
+
+}
 void launchURL(command) async {
   if(await canLaunch(command)){
     await launch(command);
