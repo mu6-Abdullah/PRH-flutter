@@ -23,7 +23,7 @@ class _EmergencyFundingPageState extends State<EmergencyFundingPage> {
             SliverAppBar(
               centerTitle: true,
               title: Text(
-                'Emergency Shelters',
+                'Emergency Funding',
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Montserrat',

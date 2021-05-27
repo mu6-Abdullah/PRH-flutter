@@ -8,6 +8,7 @@ class CustomColors {
   static Color headerTextBlue = Color(0xFF73CBF5);
   static Color textCharcoalGrey = Color(0xFF4B4B4B);
   static Color cardTextBlue = Color(0xFF45AFE2);
+  static Color cardIconBlue = Color(0xFF257BA4);
   static Color lighterCardtextBlue = Color(0xFFE7FAFF);
   static Color cardOrange = Color(0xFFF4C6A7);
   static Color cardTextOrange = Color(0xFF74492C);

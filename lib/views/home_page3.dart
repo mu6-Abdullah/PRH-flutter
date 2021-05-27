@@ -1,3 +1,4 @@
+import 'package:PRH/views/pages/court_supports.dart';
 import 'package:PRH/views/pages/emergency_funding.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -506,6 +507,115 @@ class _HomePage3State extends State<HomePage3> {
                           child: Center(
                             child: Text(
                               'Emergency Funding',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                letterSpacing: 2,
+                                color: CustomColors.textCharcoalGrey,
+                                fontFamily: 'Montserrat',
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 20),
+                    child: Card(
+                      color: CustomColors.infoCardPinkBeige,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(20.0),
+                        splashColor: Colors.red[200],
+                        onTap: (){Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => CourtSupportsPage()));
+                        },
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          child: Center(
+                            child: Text(
+                              'Court Supports',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: CustomColors.textCharcoalGrey,
+                                fontFamily: 'Montserrat',
+                                letterSpacing: 2,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 20),
+                    child: Card(
+                      color: CustomColors.infoCardPinkBeige,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(20.0),
+                        splashColor: Colors.red[200],
+                        onTap: (){Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => TranslatePage()));
+                        },
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          child: Center(
+                            child: Text(
+                              'Translate',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                letterSpacing: 2,
+                                color: CustomColors.textCharcoalGrey,
+                                fontFamily: 'Montserrat',
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 20),
+                    child: Card(
+                      color: CustomColors.infoCardPinkBeige,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(20.0),
+                        splashColor: Colors.red[200],
+                        onTap: (){Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => ResourcePage()));
+                        },
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          child: Center(
+                            child: Text(
+                              'Definition + Resources',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 letterSpacing: 2,
