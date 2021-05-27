@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_one/constants/page_classes.dart';
-import 'package:flutter_one/constants/theme_data.dart';
+import 'package:PRH/constants/page_classes.dart';
+import 'package:PRH/constants/theme_data.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:maps_launcher/maps_launcher.dart';
 class MedicalProfessionalsPage extends StatefulWidget {

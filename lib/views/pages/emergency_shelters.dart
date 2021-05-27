@@ -1,24 +1,24 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_one/constants/theme_data.dart';
-import 'package:flutter_one/constants/page_classes.dart';
+import 'package:PRH/constants/theme_data.dart';
+import 'package:PRH/constants/page_classes.dart';
 class EmergencySheltersPage extends StatefulWidget {
   @override
   _EmergencySheltersPageState createState() => _EmergencySheltersPageState();
 }
 
 class _EmergencySheltersPageState extends State<EmergencySheltersPage> {
-  List<Profile> emergencyShelterResources = [
-    Profile(name:'Alberta Council of Womens Shelter',specialization:'Addiction Counselling/Crisis Support',address:'' ,phone:'1-866-331-3933' ,email:'' , description: '',picture:'' ),
-    Profile(name:'A Safe Place',specialization:"Shelter for Abused Women & Children - Sherwood Park",address:'' ,phone:'780-464-7233' ,email:'' , description:'' ,picture:'' ),
-    Profile(name:'Eremineskin Womens Shelter',specialization:'Emergency Shelter for women & Children Living on Reserve',address:'' ,phone:'780-585-4444' ,email:'' , description:'' ,picture:'' ),
-    Profile(name:'Hope Mission',specialization:'Women and youth Emergency Shelter',address:'' ,phone:'780-422-2018' ,email:'' , description:'' ,picture: ''),
-    Profile(name:'Lurana shelter',specialization:'Emergency Shelter for women & Children Living on Reserve',address:'' ,phone:'780-424-5875' ,email:'' , description:'' ,picture:'' ),
-    Profile(name:'Safe House',specialization:'Emergency Shelter for women & Children Living on Reserve',address:'' ,phone:'780-474-9938' ,email:'' , description:'' ,picture:'' ),
-    Profile(name:'SAGE Seniors Safe House',specialization:'Independent living shelter for senior (60+ years)',address:'' ,phone:'780-454-8888' ,email:'' , description:'' ,picture:'' ),
-    Profile(name:'WEAC',specialization:'Womens emergency accomodation centre (18+ years)',address:'' ,phone:'780-423-5302' ,email:'' , description:'' ,picture:'' ),
-    Profile(name:'WIN House',specialization:'shelter for women & children fleeing domestiv violence',address:'' ,phone:'780-479-0058' ,email:'' , description:'' ,picture:'' ),
-    Profile(name:'YESS Youth',specialization:'Empowerment & support services (Under 19 years)',address:'' ,phone:'780-468-7070' ,email:'' , description:'' ,picture:'' ),
+  List<Resource> emergencyShelterResources = [
+    Resource(name:'Alberta Council of Womens Shelter',specialization:'Addiction Counselling/Crisis Support',phone:'1-866-331-3933' ),
+    Resource(name:'A Safe Place',specialization:"Shelter for Abused Women & Children - Sherwood Park" ,phone:'780-464-7233' ),
+    Resource(name:'Eremineskin Womens Shelter',specialization:'Emergency Shelter for women & Children Living on Reserve' ,phone:'780-585-4444' ),
+    Resource(name:'Hope Mission',specialization:'Women and youth Emergency Shelter',phone:'780-422-2018' ),
+    Resource(name:'Lurana shelter',specialization:'Emergency Shelter for women & Children Living on Reserve' ,phone:'780-424-5875'  ),
+    Resource(name:'Safe House',specialization:'Emergency Shelter for women & Children Living on Reserve' ,phone:'780-474-9938'  ),
+    Resource(name:'SAGE Seniors Safe House',specialization:'Independent living shelter for senior (60+ years)' ,phone:'780-454-8888'  ),
+    Resource(name:'WEAC',specialization:'Womens emergency accomodation centre (18+ years)',phone:'780-423-5302'  ),
+    Resource(name:'WIN House',specialization:'shelter for women & children fleeing domestiv violence' ,phone:'780-479-0058'  ),
+    Resource(name:'YESS Youth',specialization:'Empowerment & support services (Under 19 years)' ,phone:'780-468-7070'  ),
   ];
   @override
   Widget build(BuildContext context) {

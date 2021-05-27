@@ -1,17 +1,18 @@
+import 'package:PRH/views/pages/emergency_funding.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_one/constants/theme_data.dart';
-import 'package:flutter_one/views/pages/counselling_services.dart';
-import 'package:flutter_one/views/pages/distress_crisis_lines.dart';
-import 'package:flutter_one/views/pages/domestic_violence_supports.dart';
-import 'package:flutter_one/views/pages/emergency_shelters.dart';
-import 'package:flutter_one/views/pages/legal_assistance.dart';
-import 'package:flutter_one/views/pages/medical_professionals.dart';
-import 'package:flutter_one/views/pages/physical_and_mental_health.dart';
-import 'package:flutter_one/views/pages/psychologists.dart';
-import 'package:flutter_one/views/profile_page.dart';
-import 'package:flutter_one/views/resource_page.dart';
-import 'package:flutter_one/views/translate_page.dart';
+import 'package:PRH/constants/theme_data.dart';
+import 'package:PRH/views/pages/counselling_services.dart';
+import 'package:PRH/views/pages/distress_crisis_lines.dart';
+import 'package:PRH/views/pages/domestic_violence_supports.dart';
+import 'package:PRH/views/pages/emergency_shelters.dart';
+import 'package:PRH/views/pages/legal_assistance.dart';
+import 'package:PRH/views/pages/medical_professionals.dart';
+import 'package:PRH/views/pages/physical_and_mental_health.dart';
+import 'package:PRH/views/pages/psychologists.dart';
+import 'package:PRH/views/profile_page.dart';
+import 'package:PRH/views/resource_page.dart';
+import 'package:PRH/views/translate_page.dart';
 
 class HomePage3 extends StatefulWidget {
   HomePage3({Key key}): super(key:key);
@@ -65,7 +66,7 @@ class _HomePage3State extends State<HomePage3> {
             SliverToBoxAdapter(
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 10, vertical: 40),
-                alignment: Alignment.centerRight,
+                alignment: Alignment.center,
                 height: 400,
                 child: Image(
                   image: AssetImage('assets/sylogo.png'),
@@ -497,14 +498,14 @@ class _HomePage3State extends State<HomePage3> {
                         splashColor: Colors.red[200],
                         onTap: (){Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => ResourcePage()));
+                            MaterialPageRoute(builder: (context) => EmergencyFundingPage()));
                         },
                         child: Container(
                           width: 100,
                           height: 100,
                           child: Center(
                             child: Text(
-                              'Definition + Resources',
+                              'Emergency Funding',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 letterSpacing: 2,

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_one/constants/theme_data.dart';
+import 'package:PRH/constants/theme_data.dart';
 class ResourcePage extends StatefulWidget {
   @override
   _ResourcePageState createState() => _ResourcePageState();

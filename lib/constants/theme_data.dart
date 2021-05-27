@@ -12,4 +12,10 @@ class CustomColors {
   static Color cardOrange = Color(0xFFF4C6A7);
   static Color cardTextOrange = Color(0xFF74492C);
   static Color lighterCardtextOrange = Color(0xFFFAE7DA);
+  static Color cardRed = Color(0xFFECC5CE);
+  static Color cardTextRed = Color(0xFF8A5346);
+  static Color cardGreen = Color(0xFFAACBA4);
+  static Color cardTextGreen = Color(0xFF426636);
+  static Color cardIconGreen = Color(0xFF426636);
+
 }
