@@ -35,7 +35,7 @@ class _CourtSupportsPageState extends State<CourtSupportsPage> {
             SliverAppBar(
               centerTitle: true,
               title: Text(
-                'Emergency Shelters',
+                'Court Supports',
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Montserrat',
