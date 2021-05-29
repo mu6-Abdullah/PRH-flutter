@@ -18,5 +18,7 @@ class CustomColors {
   static Color cardGreen = Color(0xFFAACBA4);
   static Color cardTextGreen = Color(0xFF426636);
   static Color cardIconGreen = Color(0xFF426636);
+  static Color cardIconRed = Color(0xFFDF816D);
+  static Color cardIconOrange = Color(0xFFEE9E68);
 
 }

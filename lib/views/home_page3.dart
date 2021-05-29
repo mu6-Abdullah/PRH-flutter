@@ -1,3 +1,4 @@
+import 'package:PRH/views/pages/addiction_supports.dart';
 import 'package:PRH/views/pages/court_supports.dart';
 import 'package:PRH/views/pages/emergency_funding.dart';
 import 'package:flutter/cupertino.dart';
@@ -574,14 +575,14 @@ class _HomePage3State extends State<HomePage3> {
                         splashColor: Colors.red[200],
                         onTap: (){Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => TranslatePage()));
+                            MaterialPageRoute(builder: (context) => AddictionSupportsPage()));
                         },
                         child: Container(
                           width: 100,
                           height: 100,
                           child: Center(
                             child: Text(
-                              'Translate',
+                              'Addiction Support',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 letterSpacing: 2,
