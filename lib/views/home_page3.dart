@@ -30,7 +30,6 @@ class _HomePage3State extends State<HomePage3> {
       child: Scaffold(
         backgroundColor: Colors.white,
         body: CustomScrollView(
-          physics: BouncingScrollPhysics(),
           slivers: <Widget>[
             SliverAppBar(
               backgroundColor: CustomColors.mainOrange,
