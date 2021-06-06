@@ -1413,7 +1413,7 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
                                       padding: EdgeInsets.all(6.0),
                                       fillColor: CustomColors.cardIconOrange,
                                       onPressed: () {
-                                        launchURL('tel:'+'780-422-2018');
+                                        launchURL('https://fasdalberta.ca/');
                                       }
                                   ),
                                 ],
@@ -1494,7 +1494,7 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
                                           padding: EdgeInsets.all(6.0),
                                           fillColor: CustomColors.cardIconOrange,
                                           onPressed: () {
-                                            launchURL(supportGroupResources[index].phone);
+                                            launchURL('tel:'+ supportGroupResources[index].phone);
                                           }
                                       ),
                                     ],

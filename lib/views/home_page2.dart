@@ -26,17 +26,6 @@ class _HomePage2State extends State<HomePage2> {
             // Make the initial height of the SliverAppBar larger than normal.
             expandedHeight: 200,
           ),
-          // Next, create a SliverList
-          SliverList(
-            // Use a delegate to build items as they're scrolled on screen.
-            delegate: SliverChildBuilderDelegate(
-              // The builder function returns a ListTile with a title that
-              // displays the index of the current item.
-                  (context, index) => ListTile(title: Text('Item #$index')),
-              // Builds 1000 ListTiles
-              childCount: 20,
-            ),
-          ),
         ],
       ),
     );

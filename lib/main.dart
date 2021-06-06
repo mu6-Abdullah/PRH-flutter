@@ -1,3 +1,4 @@
+import 'package:PRH/views/intro_page.dart';
 import 'package:flutter/material.dart';
 import 'views/home_page.dart';
 import 'views/home_page2.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage3(),
+      home: IntroPage(),
     );
   }
 }
