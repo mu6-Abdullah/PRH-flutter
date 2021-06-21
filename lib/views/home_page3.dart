@@ -24,10 +24,86 @@ class HomePage3 extends StatefulWidget {
 }
 
 class _HomePage3State extends State<HomePage3> {
+  var selectedLanguage = 'English';
+
+  void changeLanguage(){
+    setState(() {
+      if(selectedLanguage == 'English'){
+        selectedLanguage = 'ਪੰਜਾਬੀ';
+      }else{
+        selectedLanguage = 'English';
+      }
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        drawer: Drawer(
+          child: ListView(
+            // Important: Remove any padding from the ListView.
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  color: CustomColors.cardBlue,
+                ),
+                child: Text(
+                    'Menu',
+                  style: TextStyle(
+                    color: CustomColors.textCharcoalGrey,
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.w500,
+                    fontSize: 25,
+                  ),
+                ),
+              ),
+              ListTile(
+                title: Text(
+                  selectedLanguage,
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+                trailing: Switch(
+                  value: selectedLanguage == 'English' ? false : true,
+                  activeColor: CustomColors.mainOrange,
+                  activeTrackColor: Colors.white,
+                  inactiveThumbColor: CustomColors.mainBlue ,
+                  inactiveTrackColor: Colors.white,
+                  onChanged: (value) {
+                    setState(() {
+                      changeLanguage();
+                    });
+                  },
+                ),
+                onTap: () {
+                  changeLanguage();
+                },
+                tileColor: selectedLanguage == 'English' ? CustomColors.cardBlue : CustomColors.cardOrange  ,
+              ),
+              ListTile(
+                title: Text('Contact Us'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: Text('Add a Resource'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
+        ),
         backgroundColor: Colors.white,
         body: CustomScrollView(
           slivers: <Widget>[
@@ -46,25 +122,20 @@ class _HomePage3State extends State<HomePage3> {
                 ),
               ),
             ),
+
             SliverToBoxAdapter(
-
-            ),
-
-            SliverAppBar(
-              backgroundColor: CustomColors.mainOrange,
-              pinned: false,
-              expandedHeight: 100.0,
-              flexibleSpace: FlexibleSpaceBar(
-                titlePadding: EdgeInsets.fromLTRB(35, 5, 35, 15),
-                centerTitle: true,
-                title: Text(
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                height: 110,
+                color: CustomColors.mainOrange,
+                child: Text(
                   'A Handbook Full Of Resources Catered To The Needs of Punjabi-Speaking Edmontonians',
                   style: TextStyle(
-                      color: CustomColors.textCharcoalGrey,
-                      fontFamily: 'Montserrat',
-                      fontWeight: FontWeight.w300,
-                      fontSize: 15,
-                      fontStyle: FontStyle.italic,
+                    color: CustomColors.textCharcoalGrey,
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.w300,
+                    fontSize: 25,
+                    fontStyle: FontStyle.italic,
                   ),
                 ),
               ),
@@ -604,7 +675,7 @@ class _HomePage3State extends State<HomePage3> {
                   Container(
                     padding: EdgeInsets.symmetric(vertical: 20),
                     child: Card(
-                      color: CustomColors.infoCardPinkBeige,
+                      color: CustomColors.homePageFooterBlue,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20.0),
                       ),
@@ -620,7 +691,7 @@ class _HomePage3State extends State<HomePage3> {
                           height: 100,
                           child: Center(
                             child: Text(
-                              'Home Page Example',
+                              'Contact Us',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 letterSpacing: 2,
