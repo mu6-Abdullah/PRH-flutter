@@ -190,10 +190,20 @@ class _EmergencyFundingPageState extends State<EmergencyFundingPage> {
             ),
             SliverToBoxAdapter(
               child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: CustomColors.cardBlue,
+                ),
+                height: 5,
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: Container(
                   padding: EdgeInsets.symmetric(vertical: 25),
                   child: Center(
                     child: Text(
-                      'Resources',
+                      'Emergency Funding Resources',
                       style: TextStyle(
                           fontSize: 25,
                           fontFamily: 'Montserrat',
@@ -216,6 +226,16 @@ class _EmergencyFundingPageState extends State<EmergencyFundingPage> {
                       ),
                     ),
                   )
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: CustomColors.cardGreen,
+                ),
+                height: 5,
               ),
             ),
             SliverToBoxAdapter(

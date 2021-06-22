@@ -57,7 +57,7 @@ class _PsychologistsState extends State<PsychologistsPage> {
                   padding: EdgeInsets.symmetric(vertical: 25),
                   child: Center(
                     child: Text(
-                      'Profiles',
+                      'Psychologist Profiles',
                       style: TextStyle(
                           fontSize: 25,
                           fontFamily: 'Montserrat',
@@ -65,6 +65,16 @@ class _PsychologistsState extends State<PsychologistsPage> {
                       ),
                     ),
                   )
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: CustomColors.cardBlue,
+                ),
+                height: 5,
               ),
             ),
             SliverList(
@@ -176,7 +186,7 @@ class _PsychologistsState extends State<PsychologistsPage> {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
-                                        'Specializing in ' + psychologistProfiles[index].description,
+                                        psychologistProfiles[index].description,
                                         style: TextStyle(
                                             fontFamily: 'Montserrat',
                                             fontSize: 14,

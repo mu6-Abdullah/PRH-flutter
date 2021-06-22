@@ -15,11 +15,11 @@ class _DomesticViolenceSupportsPageState extends State<DomesticViolenceSupportsP
 
   ];
   List<Profile> englishDomesticViolenceSupportsList = [
-    Profile(name: 'EPOP', specialization: 'Emergency Protection Order \nProgram', address: '', phone: 'null' , email: 'null', description: 'Legal Aid Alberta helps victims of family violence through its Emergency Protection Order Program. The Emergency Protection Order Program provides victims of domestic violence with information and a lawyer who can help them to obtain and confirm protection orders. The Emergency Protection Order Program also provides ongoing information, risk assessment and safety plans to victims of family violence.', picture: 'assets/grey_circle.png'),
-    Profile(name: 'FVIL', specialization: 'Family Violence Info Line', address: '', phone: '310-1818', email: 'null', description: 'The Family Violence Info Line is a 24/7 telephone service and online chat service for anyone who is impacted by family violence/abuse or anyone who knows someone is impacted.', picture:'assets/grey_circle.png' ),
-    Profile(name: 'SAIF', specialization: 'Stop Abuse in Families', address: '', phone: '780 460-2195' , email: 'info@stopabuse.ca', description: ' AIF offers support groups, individual and group counselling, elder abuse support, and educational prevention programs to schools and groups in the St. Albert community.', picture: 'assets/grey_circle.png'),
-    Profile(name: 'The Family Centre', specialization: 'Health Broker', address: '', phone: '780 423-2831', email: 'null', description: 'The Family Centre provides workshops, therapy, family support services, interpretation, and translation services to foster healthy families in healthy communities.', picture:'assets/grey_circle.png' ),
-    Profile(name: 'The Today Centre', specialization: 'Intervention Resources', address: '', phone: '780 455-6880' , email: 'null', description: ' The Today Centre delivers a comprehensive, multidisciplinary response to family violence, including sexual assault. It offers a safe place for those affected by domestic violence to access timely, short-term services and support.', picture: 'assets/grey_circle.png'),
+    Profile(name: 'Emergency Protection Order Program', specialization: '', address: '', phone: '' , email: '', description: 'Legal Aid Alberta helps victims of family violence through its Emergency Protection Order Program. The Emergency Protection Order Program provides victims of domestic violence with information and a lawyer who can help them to obtain and confirm protection orders. The Emergency Protection Order Program also provides ongoing information, risk assessment and safety plans to victims of family violence.', picture: 'assets/grey_circle.png'),
+    Profile(name: 'Family Violence Info Line', specialization: '', address: '', phone: '310-1818', email: '', description: 'The Family Violence Info Line is a 24/7 telephone service and online chat service for anyone who is impacted by family violence/abuse or anyone who knows someone is impacted.', picture:'assets/grey_circle.png' ),
+    Profile(name: 'Stop Abuse in Families', specialization: '', address: '', phone: '780 460-2195' , email: 'info@stopabuse.ca', description: ' AIF offers support groups, individual and group counselling, elder abuse support, and educational prevention programs to schools and groups in the St. Albert community.', picture: 'assets/grey_circle.png'),
+    Profile(name: 'The Family Centre', specialization: 'Health Broker', address: '', phone: '780 423-2831', email: '', description: 'The Family Centre provides workshops, therapy, family support services, interpretation, and translation services to foster healthy families in healthy communities.', picture:'assets/grey_circle.png' ),
+    Profile(name: 'The Today Centre', specialization: 'Intervention Resources', address: '', phone: '780 455-6880' , email: '', description: ' The Today Centre delivers a comprehensive, multidisciplinary response to family violence, including sexual assault. It offers a safe place for those affected by domestic violence to access timely, short-term services and support.', picture: 'assets/grey_circle.png'),
   ];
   @override
   Widget build(BuildContext context) {
@@ -69,6 +69,7 @@ class _DomesticViolenceSupportsPageState extends State<DomesticViolenceSupportsP
                   )
               ),
             ),
+
             SliverList(
               delegate: SliverChildBuilderDelegate(
                     (BuildContext context, int index){
@@ -299,186 +300,114 @@ class _DomesticViolenceSupportsPageState extends State<DomesticViolenceSupportsP
               delegate: SliverChildBuilderDelegate(
                     (BuildContext context, int index){
                   return Container(
-                    // padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
                     padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                     child: Card(
                       color: CustomColors.cardOrange,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20.0),
                       ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          Row(
-                            children: <Widget>[
-                              Container(
-                                padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
-                                // padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-                                child: Image(
-                                  image: AssetImage(englishDomesticViolenceSupportsList[index].picture),
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(15, 10, 10, 10),
+                        // padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              englishDomesticViolenceSupportsList[index].name,
+                              style: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  fontSize: 22,
+                                  letterSpacing: 1.5,
+                                  color: CustomColors.cardTextOrange,
+                                  fontWeight: FontWeight.w500
+                              ),
+                            ),
+                            SizedBox(height: 10,),
+                            Text(
+                              englishDomesticViolenceSupportsList[index].description,
+                              style: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  fontSize: 14,
+                                  letterSpacing: 1,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500
+                              ),
+                            ),
+                            SizedBox(height:10),
+                            englishDomesticViolenceSupportsList[index].phone != '' ? Container(
+                              child: Card(
+                                color: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20.0),
                                 ),
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      englishDomesticViolenceSupportsList[index].name,
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontSize: 22,
-                                          letterSpacing: 1.5,
-                                          color: CustomColors.cardTextOrange,
-                                          fontWeight: FontWeight.w500
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      englishDomesticViolenceSupportsList[index].specialization,
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontSize: 14,
-                                          letterSpacing: 1,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.w500
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    englishDomesticViolenceSupportsList[index].address != '' ? Text(
-                                      englishDomesticViolenceSupportsList[index].address,
-                                      textAlign: TextAlign.left,
+                                    Text('    Phone Line',
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
                                           fontSize: 14,
                                           letterSpacing: 1,
                                           color: CustomColors.textCharcoalGrey,
                                           fontWeight: FontWeight.w500
-                                      ),
-                                    ): SizedBox(height: 0),
-                                  ]
-                              )
-                            ],
-                          ),
-                          Theme(
-                            data:theme,
-                            child: ExpansionTile(
-                              title: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: <Widget>[
-                                    SizedBox(width: 90),
-                                    englishDomesticViolenceSupportsList[index].address != '' ? Icon(
-                                      Icons.location_on_rounded,
-                                      color: CustomColors.cardTextOrange,
-                                    ): SizedBox(width: 0,),
-                                    englishDomesticViolenceSupportsList[index].address != '' ? SizedBox(width: 30) : SizedBox(width: 0,),
-                                    englishDomesticViolenceSupportsList[index].email != 'null' ? Icon(Icons.email,
-                                      color: CustomColors.cardTextOrange,
-                                    ) : SizedBox(width: 0),
-                                    englishDomesticViolenceSupportsList[index].email != 'null' ? SizedBox(width: 30) : SizedBox(width: 0,),
-                                    englishDomesticViolenceSupportsList[index].phone != 'null' ? Icon(Icons.local_phone_rounded,
-                                      color: CustomColors.cardTextOrange,
-                                    ) : SizedBox(width: 0,),
-                                    SizedBox(width: 30),
-                                  ]
-                              ),
-                              children: <Widget>[
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: CustomColors.lighterCardtextOrange,
-                                      // color: Colors.orange[50],
-                                      borderRadius: BorderRadius.circular(20.0)
-
-                                  ),
-                                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                                  margin: EdgeInsets.fromLTRB(10, 10, 10, 30),
-                                  // margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 5),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: <Widget>[
-                                      Text(
-                                        'Specializing in ' + englishDomesticViolenceSupportsList[index].description,
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontSize: 14,
-                                            letterSpacing: 0.5,
-                                            color: CustomColors.textCharcoalGrey,
-                                            fontWeight: FontWeight.w500
+                                      ),),
+                                    RawMaterialButton(
+                                        constraints: BoxConstraints(
+                                            minWidth: 50
+                                        ) ,
+                                        child: Icon(
+                                          Icons.local_phone_rounded,
+                                          color: Colors.white,
                                         ),
-                                      ),
-                                      englishDomesticViolenceSupportsList[index].address != '' ? Row(
-                                        children: <Widget>[
-                                          RawMaterialButton(
-                                            constraints: BoxConstraints(
-                                                minWidth: 50
-                                            ) ,
-                                            fillColor: CustomColors.mainOrange,
-                                            shape: CircleBorder(),
-                                            padding: EdgeInsets.all(6.0),
-                                            child: Icon(
-                                              Icons.location_on_rounded,
-                                              color: Colors.white,
-                                            ),
-                                            onPressed: () => MapsLauncher.launchQuery(englishDomesticViolenceSupportsList[index].address + ' Edmonton AB'),
-                                          ),
-                                          Text(englishDomesticViolenceSupportsList[index].address),
-                                        ],
-                                      ): SizedBox(height: 0),
-                                      englishDomesticViolenceSupportsList[index].email != 'null' ? Row(
-                                        children: <Widget>[
-                                          RawMaterialButton(
-                                            constraints: BoxConstraints(
-                                                minWidth: 50
-                                            ) ,
-                                            fillColor: CustomColors.mainOrange,
-                                            shape: CircleBorder(),
-                                            padding: EdgeInsets.all(6.0),
-                                            child: Icon(
-                                              Icons.email,
-                                              color: Colors.white,
-                                            ),
-                                            onPressed: (){
-                                              launchURL('mailto:'+englishDomesticViolenceSupportsList[index].email);
-                                            },
-                                          ),
-                                          Text(englishDomesticViolenceSupportsList[index].email),
-                                        ],
-                                      ): SizedBox(height: 0),
-                                      englishDomesticViolenceSupportsList[index].phone != 'null' ? Row(
-                                        children: <Widget>[
-                                          RawMaterialButton(
-                                              constraints: BoxConstraints(
-                                                  minWidth: 50
-                                              ) ,
-                                              child: Icon(
-                                                Icons.local_phone_rounded,
-                                                color: Colors.white,
-                                              ),
-                                              shape: CircleBorder(),
-                                              padding: EdgeInsets.all(6.0),
-                                              fillColor: CustomColors.mainOrange,
-                                              onPressed: () {
-                                                launchURL('tel:'+englishDomesticViolenceSupportsList[index].phone);
-                                              }
-                                          ),
-                                          Text(englishDomesticViolenceSupportsList[index].phone),
-                                        ],
-                                      ): SizedBox(height: 0),
-                                    ],
-                                  ),
+                                        shape: CircleBorder(),
+                                        padding: EdgeInsets.all(6.0),
+                                        fillColor: CustomColors.cardIconOrange,
+                                        onPressed: () {
+                                          launchURL('tel:'+englishDomesticViolenceSupportsList[index].phone);
+                                        }
+                                    ),
+                                  ],
                                 ),
-                              ],
-                            ),
-                          ),
-                        ],
+                              ),
+                            ): SizedBox(height:0),
+                            englishDomesticViolenceSupportsList[index].email != '' ? Container(
+                              child: Card(
+                                color: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    Text('    Email',
+                                      style: TextStyle(
+                                          fontFamily: 'Montserrat',
+                                          fontSize: 14,
+                                          letterSpacing: 1,
+                                          color: CustomColors.textCharcoalGrey,
+                                          fontWeight: FontWeight.w500
+                                      ),),
+                                    RawMaterialButton(
+                                        constraints: BoxConstraints(
+                                            minWidth: 50
+                                        ) ,
+                                        child: Icon(
+                                          Icons.email,
+                                          color: Colors.white,
+                                        ),
+                                        shape: CircleBorder(),
+                                        padding: EdgeInsets.all(6.0),
+                                        fillColor: CustomColors.cardIconOrange,
+                                        onPressed: () {
+                                          launchURL('mailto:'+englishDomesticViolenceSupportsList[index].email);
+                                        }
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ): SizedBox(height:0),
+                          ],
+                        ),
                       ),
                     ),
                   );
@@ -487,6 +416,7 @@ class _DomesticViolenceSupportsPageState extends State<DomesticViolenceSupportsP
                 semanticIndexOffset: 2,
               ),
             ),
+
           ],
         ),
       ),

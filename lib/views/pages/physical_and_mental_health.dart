@@ -55,7 +55,7 @@ class _PhysicalAndMentalHealthPageState extends State<PhysicalAndMentalHealthPag
               child: Container(
                   padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                   child: Card(
-                    color: CustomColors.cardOrange,
+                    color: CustomColors.infoCardPinkBeige,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
                     ),
@@ -127,10 +127,20 @@ class _PhysicalAndMentalHealthPageState extends State<PhysicalAndMentalHealthPag
             ),
             SliverToBoxAdapter(
               child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: CustomColors.cardBlue,
+                ),
+                height: 5,
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: Container(
                 padding: EdgeInsets.symmetric(vertical: 25),
                 child: Center(
                   child: Text(
-                    'Resources',
+                    'Health Resources',
                     style: TextStyle(
                         fontSize: 25,
                         fontFamily: 'Montserrat',
@@ -138,6 +148,16 @@ class _PhysicalAndMentalHealthPageState extends State<PhysicalAndMentalHealthPag
                     ),
                   ),
                 ),
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: CustomColors.cardOrange,
+                ),
+                height: 5,
               ),
             ),
             SliverList(

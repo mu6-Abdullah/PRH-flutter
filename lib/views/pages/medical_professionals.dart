@@ -51,6 +51,31 @@ class _MedicalProfessionalsPageState extends State<MedicalProfessionalsPage> {
               ),
               backgroundColor: CustomColors.mainOrange,
             ),
+            SliverToBoxAdapter(
+              child: Container(
+                  padding: EdgeInsets.symmetric(vertical: 25),
+                  child: Center(
+                    child: Text(
+                      'Doctor Profiles',
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontFamily: 'Montserrat',
+                          fontWeight: FontWeight.w500
+                      ),
+                    ),
+                  )
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: CustomColors.cardBlue,
+                ),
+                height: 5,
+              ),
+            ),
             SliverList(
               delegate: SliverChildBuilderDelegate(
                   (BuildContext context, int index){
@@ -160,7 +185,7 @@ class _MedicalProfessionalsPageState extends State<MedicalProfessionalsPage> {
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: <Widget>[
                                         Text(
-                                          'Specializing in ' + mpProfileList[index].description,
+                                          mpProfileList[index].description,
                                           style: TextStyle(
                                               fontFamily: 'Montserrat',
                                               fontSize: 14,

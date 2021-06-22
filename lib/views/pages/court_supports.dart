@@ -91,10 +91,20 @@ class _CourtSupportsPageState extends State<CourtSupportsPage> {
             ),
             SliverToBoxAdapter(
               child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: CustomColors.infoCardPinkBeige,
+                ),
+                height: 5,
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: Container(
                   padding: EdgeInsets.symmetric(vertical: 25),
                   child: Center(
                     child: Text(
-                      'Resources',
+                      'Court Support Resources',
                       style: TextStyle(
                           fontSize: 25,
                           fontFamily: 'Montserrat',
@@ -132,6 +142,16 @@ class _CourtSupportsPageState extends State<CourtSupportsPage> {
                       ),
                     ),
                   )
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: CustomColors.cardBlue,
+                ),
+                height: 5,
               ),
             ),
 

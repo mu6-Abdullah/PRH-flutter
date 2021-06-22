@@ -10,17 +10,17 @@ class DistressCrisisLinesPage extends StatefulWidget {
 
 class _DistressCrisisLinesPageState extends State<DistressCrisisLinesPage> {
   List<Profile> distressCrisisLines = [
-    Profile(name: 'Child Abuse Hotline' , specialization: '24 hour help line', address: '' ,phone: '780 784-2213' , email: 'null' , description: '24 hour help line, 170 languages' , picture: 'assets/grey_circle.png' ),
-    Profile(name: 'Children Crisis \nResponse Team', specialization: '24 hour Alberta Health Services' , address: '',phone: '866-845-3425' , email:'null' , description: '24 hour Alberta Health Services - Children' , picture: 'assets/grey_circle.png' ),
-    Profile(name: 'CMHA 24-Hour \nDistress Line', specialization: '24 hour distress line' , address: '',phone:'780 702-1725' , email: 'null' , description: 'Provides free legal information and advice to low to moderate income people in the Edmonton area', picture: 'assets/grey_circle.png' ),
+    Profile(name: 'Child Abuse Hotline' , specialization: '24 hour help line', address: '' ,phone: '780 784-2213' , email: 'n' , description: '24 hour help line, 170 languages' , picture: 'assets/grey_circle.png' ),
+    Profile(name: 'Children Crisis \nResponse Team', specialization: '24 hour Alberta Health Services' , address: '',phone: '866-845-3425' , email:'' , description: '24 hour Alberta Health Services - Children' , picture: 'assets/grey_circle.png' ),
+    Profile(name: 'CMHA 24-Hour \nDistress Line', specialization: '24 hour distress line' , address: '',phone:'780 702-1725' , email: '' , description: 'Provides free legal information and advice to low to moderate income people in the Edmonton area', picture: 'assets/grey_circle.png' ),
     Profile(name: 'Emergency Social \nServices', specialization: '24 hour assistance', address: '',phone: '800-661-3446' , email: 'ca.information@OCYA.alberta.ca', description: 'The OCYA is all about helping young people who are receiving services. Whether this be through advocating, arranging for legal representation, or engaging the community on issues that matter to young people, the OCYA cares about the people they serve' , picture: 'assets/grey_circle.png' ),
-    Profile(name: 'Family Violence \nInfo Line', specialization: '24 hour helpline, 170 languages' , address: '',phone: '780 784-7500' , email: 'null' , description: 'Offers free consultation for legal action', picture: 'assets/grey_circle.png' ),
-    Profile(name: 'Human Trafficking \nHotline', specialization: '24 hour helpline' , address: '',phone:'780 702-1725' , email: 'null' , description: 'Provides free legal information and advice to low to moderate income people in the Edmonton area', picture: 'assets/grey_circle.png' ),
+    Profile(name: 'Family Violence \nInfo Line', specialization: '24 hour helpline, 170 languages' , address: '',phone: '780 784-7500' , email: '' , description: 'Offers free consultation for legal action', picture: 'assets/grey_circle.png' ),
+    Profile(name: 'Human Trafficking \nHotline', specialization: '24 hour helpline' , address: '',phone:'780 702-1725' , email: '' , description: 'Provides free legal information and advice to low to moderate income people in the Edmonton area', picture: 'assets/grey_circle.png' ),
     Profile(name: 'Kids Help Phone', specialization: '24 hour helpline ', address: '',phone: '800-661-3446' , email: 'ca.information@OCYA.alberta.ca', description: 'The OCYA is all about helping young people who are receiving services. Whether this be through advocating, arranging for legal representation, or engaging the community on issues that matter to young people, the OCYA cares about the people they serve' , picture: 'assets/grey_circle.png' ),
-    Profile(name: 'Kids Kottage', specialization: '24 hour crisis and nursery' , address: '',phone: '780 784-7500' , email: 'null' , description: 'Offers free consultation for legal action', picture: 'assets/grey_circle.png' ),
-    Profile(name: 'Senior Abuse Helpline', specialization: '24 hour helpline' , address: '',phone:'780 454-8888' , email: 'null' , description: '24 hour senior abuse line', picture: 'assets/grey_circle.png' ),
-    Profile(name: 'Sexual Assault Centre', specialization: '24 hour helpline ', address: '',phone: '780 423-4121' , email: 'null', description: '24 hour sexual assault crisis line' , picture: 'assets/grey_circle.png' ),
-    Profile(name: 'Suicide Prevention \nHotline', specialization: '24 hour helpline' , address: '',phone: '888-784-2433' , email: 'null' , description: '24 hour suicide help line', picture: 'assets/grey_circle.png' ),
+    Profile(name: 'Kids Kottage', specialization: '24 hour crisis and nursery' , address: '',phone: '780 784-7500' , email: '' , description: 'Offers free consultation for legal action', picture: 'assets/grey_circle.png' ),
+    Profile(name: 'Senior Abuse Helpline', specialization: '24 hour helpline' , address: '',phone:'780 454-8888' , email: '' , description: '24 hour senior abuse line', picture: 'assets/grey_circle.png' ),
+    Profile(name: 'Sexual Assault Centre', specialization: '24 hour helpline ', address: '',phone: '780 423-4121' , email: '', description: '24 hour sexual assault crisis line' , picture: 'assets/grey_circle.png' ),
+    Profile(name: 'Suicide Prevention \nHotline', specialization: '24 hour helpline' , address: '',phone: '888-784-2433' , email: '' , description: '24 hour suicide help line', picture: 'assets/grey_circle.png' ),
 
   ];
 
@@ -40,7 +40,7 @@ class _DistressCrisisLinesPageState extends State<DistressCrisisLinesPage> {
               SliverAppBar(
                 centerTitle: true,
                 title: Text(
-                  'Domestic Violence Supports',
+                  'Distress and Crisis Lines',
                   style: TextStyle(
                     color: Colors.white,
                     fontFamily: 'Montserrat',
@@ -62,7 +62,7 @@ class _DistressCrisisLinesPageState extends State<DistressCrisisLinesPage> {
                     padding: EdgeInsets.symmetric(vertical: 25),
                     child: Center(
                       child: Text(
-                        'Profiles',
+                        'Distress and Crisis Resources',
                         style: TextStyle(
                             fontSize: 25,
                             fontFamily: 'Montserrat',
@@ -72,189 +72,128 @@ class _DistressCrisisLinesPageState extends State<DistressCrisisLinesPage> {
                     )
                 ),
               ),
+              SliverToBoxAdapter(
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: CustomColors.cardOrange,
+                  ),
+                  height: 5,
+                ),
+              ),
               SliverList(
                 delegate: SliverChildBuilderDelegate(
                       (BuildContext context, int index){
                     return Container(
-                      // padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
                       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                       child: Card(
-                        color: CustomColors.cardBlue,
+                        color: CustomColors.cardOrange,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
                         ),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: <Widget>[
-                            Row(
-                              children: <Widget>[
-                                Container(
-                                  padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
-                                  // padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-                                  child: Image(
-                                    image: AssetImage(distressCrisisLines[index].picture),
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(15, 10, 10, 10),
+                          // padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                distressCrisisLines[index].name,
+                                style: TextStyle(
+                                    fontFamily: 'Montserrat',
+                                    fontSize: 22,
+                                    letterSpacing: 1.5,
+                                    color: CustomColors.cardTextOrange,
+                                    fontWeight: FontWeight.w500
+                                ),
+                              ),
+                              SizedBox(height: 10,),
+                              Text(
+                                distressCrisisLines[index].description,
+                                style: TextStyle(
+                                    fontFamily: 'Montserrat',
+                                    fontSize: 14,
+                                    letterSpacing: 1,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w500
+                                ),
+                              ),
+                              SizedBox(height:10),
+                              distressCrisisLines[index].phone != '' ? Container(
+                                child: Card(
+                                  color: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20.0),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: 5,
-                                ),
-                                Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      Text(
-                                        distressCrisisLines[index].name,
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontSize: 22,
-                                            letterSpacing: 1.5,
-                                            color: CustomColors.cardTextBlue,
-                                            fontWeight: FontWeight.w500
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      Text(
-                                        distressCrisisLines[index].specialization,
-                                        style: TextStyle(
-                                            fontFamily: 'Montserrat',
-                                            fontSize: 14,
-                                            letterSpacing: 1,
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.w500
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      distressCrisisLines[index].address != '' ? Text(
-                                        distressCrisisLines[index].address,
-                                        textAlign: TextAlign.left,
+                                      Text('    Phone Line',
                                         style: TextStyle(
                                             fontFamily: 'Montserrat',
                                             fontSize: 14,
                                             letterSpacing: 1,
                                             color: CustomColors.textCharcoalGrey,
                                             fontWeight: FontWeight.w500
-                                        ),
-                                      ): SizedBox(height: 0),
-                                    ]
-                                )
-                              ],
-                            ),
-                            Theme(
-                              data:theme,
-                              child: ExpansionTile(
-                                title: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: <Widget>[
-                                      SizedBox(width: 90),
-                                      distressCrisisLines[index].address != '' ? Icon(
-                                        Icons.location_on_rounded,
-                                        color: CustomColors.cardTextBlue,
-                                      ): SizedBox(width: 0,),
-                                      distressCrisisLines[index].address != '' ? SizedBox(width: 30) : SizedBox(width: 0,),
-                                      distressCrisisLines[index].email != 'null' ? Icon(Icons.email,
-                                        color: CustomColors.cardTextBlue,
-                                      ) : SizedBox(width: 0),
-                                      distressCrisisLines[index].email != 'null' ? SizedBox(width: 30) : SizedBox(width: 0,),
-                                      distressCrisisLines[index].phone != 'null' ? Icon(Icons.local_phone_rounded,
-                                        color: CustomColors.cardTextBlue,
-                                      ) : SizedBox(width: 0,),
-                                      SizedBox(width: 30),
-                                    ]
-                                ),
-                                children: <Widget>[
-                                  Container(
-                                    decoration: BoxDecoration(
-                                        color: CustomColors.lighterCardtextBlue,
-                                        borderRadius: BorderRadius.circular(20.0)
-
-                                    ),
-                                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                                    margin: EdgeInsets.fromLTRB(10, 10, 10, 30),
-                                    // margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 5),
-                                    child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        Text(
-                                          'Specializing in ' + distressCrisisLines[index].description,
-                                          style: TextStyle(
-                                              fontFamily: 'Montserrat',
-                                              fontSize: 14,
-                                              letterSpacing: 0.5,
-                                              color: CustomColors.textCharcoalGrey,
-                                              fontWeight: FontWeight.w500
+                                        ),),
+                                      RawMaterialButton(
+                                          constraints: BoxConstraints(
+                                              minWidth: 50
+                                          ) ,
+                                          child: Icon(
+                                            Icons.local_phone_rounded,
+                                            color: Colors.white,
                                           ),
-                                        ),
-                                        distressCrisisLines[index].address != '' ? Row(
-                                          children: <Widget>[
-                                            RawMaterialButton(
-                                              constraints: BoxConstraints(
-                                                  minWidth: 50
-                                              ) ,
-                                              fillColor: CustomColors.lighterCardtextBlue,
-                                              shape: CircleBorder(),
-                                              padding: EdgeInsets.all(6.0),
-                                              child: Icon(
-                                                Icons.location_on_rounded,
-                                                color: CustomColors.cardTextBlue,
-                                              ),
-                                              onPressed: () => MapsLauncher.launchQuery(distressCrisisLines[index].address + ' Edmonton AB'),
-                                            ),
-                                            Text(distressCrisisLines[index].address),
-                                          ],
-                                        ): SizedBox(height: 0),
-                                        distressCrisisLines[index].email != 'null' ? Row(
-                                          children: <Widget>[
-                                            RawMaterialButton(
-                                              constraints: BoxConstraints(
-                                                  minWidth: 50
-                                              ) ,
-                                              fillColor: CustomColors.lighterCardtextBlue,
-                                              shape: CircleBorder(),
-                                              padding: EdgeInsets.all(6.0),
-                                              child: Icon(
-                                                Icons.email,
-                                                color: CustomColors.cardTextBlue,
-                                              ),
-                                              onPressed: (){
-                                                launchURL('mailto:'+distressCrisisLines[index].email);
-                                              },
-                                            ),
-                                            Text(distressCrisisLines[index].email),
-                                          ],
-                                        ): SizedBox(height: 0),
-                                        Row(
-                                          children: <Widget>[
-                                            RawMaterialButton(
-                                                constraints: BoxConstraints(
-                                                    minWidth: 50
-                                                ) ,
-                                                child: Icon(
-                                                  Icons.local_phone_rounded,
-                                                  color: CustomColors.cardTextBlue,
-                                                ),
-                                                shape: CircleBorder(),
-                                                padding: EdgeInsets.all(6.0),
-                                                fillColor: CustomColors.lighterCardtextBlue,
-                                                onPressed: () {
-                                                  launchURL('tel:'+distressCrisisLines[index].phone);
-                                                }
-                                            ),
-                                            Text(distressCrisisLines[index].phone),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
+                                          shape: CircleBorder(),
+                                          padding: EdgeInsets.all(6.0),
+                                          fillColor: CustomColors.cardIconOrange,
+                                          onPressed: () {
+                                            launchURL('tel:'+distressCrisisLines[index].phone);
+                                          }
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
-                            ),
-                          ],
+                                ),
+                              ): SizedBox(height:0),
+                              distressCrisisLines[index].email != '' ? Container(
+                                child: Card(
+                                  color: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20.0),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      Text('    Email',
+                                        style: TextStyle(
+                                            fontFamily: 'Montserrat',
+                                            fontSize: 14,
+                                            letterSpacing: 1,
+                                            color: CustomColors.textCharcoalGrey,
+                                            fontWeight: FontWeight.w500
+                                        ),),
+                                      RawMaterialButton(
+                                          constraints: BoxConstraints(
+                                              minWidth: 50
+                                          ) ,
+                                          child: Icon(
+                                            Icons.email,
+                                            color: Colors.white,
+                                          ),
+                                          shape: CircleBorder(),
+                                          padding: EdgeInsets.all(6.0),
+                                          fillColor: CustomColors.cardIconOrange,
+                                          onPressed: () {
+                                            launchURL('mailto:'+distressCrisisLines[index].email);
+                                          }
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ): SizedBox(height:0),
+                            ],
+                          ),
                         ),
                       ),
                     );
@@ -262,7 +201,7 @@ class _DistressCrisisLinesPageState extends State<DistressCrisisLinesPage> {
                   childCount: distressCrisisLines.length,
                   semanticIndexOffset: 2,
                 ),
-              )
+              ),
             ],
           ),
         ),

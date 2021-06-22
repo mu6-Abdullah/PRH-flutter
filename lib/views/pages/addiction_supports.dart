@@ -114,10 +114,20 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
               ),
               SliverToBoxAdapter(
                 child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: CustomColors.infoCardPinkBeige,
+                  ),
+                  height: 5,
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Container(
                   padding: EdgeInsets.symmetric(vertical: 25),
                   child: Center(
                     child: Text(
-                      'Resources',
+                      'Addiction Resources',
                       style: TextStyle(
                           fontSize: 25,
                           fontFamily: 'Montserrat',
@@ -140,6 +150,16 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
                         ),
                       ),
                     )
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: CustomColors.cardBlue,
+                  ),
+                  height: 5,
                 ),
               ),
               SliverToBoxAdapter(
@@ -252,6 +272,16 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
               ),
               SliverToBoxAdapter(
                 child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: CustomColors.cardBlue,
+                  ),
+                  height: 5,
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Container(
                     padding: EdgeInsets.symmetric(vertical: 25),
                     child: Center(
                       child: Text(
@@ -278,6 +308,16 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
                         ),
                       ),
                     )
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: CustomColors.cardOrange,
+                  ),
+                  height: 5,
                 ),
               ),
               SliverToBoxAdapter(
@@ -561,6 +601,16 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
               ),
               SliverToBoxAdapter(
                 child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: CustomColors.cardOrange,
+                  ),
+                  height: 5,
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Container(
                     padding: EdgeInsets.symmetric(vertical: 25),
                     child: Center(
                       child: Text(
@@ -572,6 +622,16 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
                         ),
                       ),
                     )
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: CustomColors.cardRed,
+                  ),
+                  height: 5,
                 ),
               ),
               SliverToBoxAdapter(
@@ -776,10 +836,20 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
               ),
               SliverToBoxAdapter(
                 child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: CustomColors.cardRed,
+                  ),
+                  height: 5,
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Container(
                     padding: EdgeInsets.symmetric(vertical: 25),
                     child: Center(
                       child: Text(
-                        'Emergency SheltersFor The Intoxicated',
+                        'Emergency Shelters For The Intoxicated',
                         style: TextStyle(
                             fontSize: 18,
                             fontFamily: 'Montserrat',
@@ -787,6 +857,16 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
                         ),
                       ),
                     )
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: CustomColors.cardGreen,
+                  ),
+                  height: 5,
                 ),
               ),
               SliverToBoxAdapter(
@@ -987,6 +1067,16 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
                   ),
                 ),
               ),
+              SliverToBoxAdapter(
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: CustomColors.cardGreen,
+                  ),
+                  height: 5,
+                ),
+              ),
 
               SliverToBoxAdapter(
                 child: Container(
@@ -1001,6 +1091,16 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
                         ),
                       ),
                     )
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: CustomColors.cardBlue,
+                  ),
+                  height: 5,
                 ),
               ),
               SliverList(
@@ -1175,6 +1275,16 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
               ),
               SliverToBoxAdapter(
                 child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: CustomColors.cardBlue,
+                  ),
+                  height: 5,
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Container(
                     padding: EdgeInsets.symmetric(vertical: 25),
                     child: Center(
                       child: Text(
@@ -1186,6 +1296,16 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
                         ),
                       ),
                     )
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 160, vertical: 30),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: CustomColors.cardOrange,
+                  ),
+                  height: 5,
                 ),
               ),
 
