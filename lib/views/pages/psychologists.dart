@@ -41,12 +41,12 @@ class _PsychologistsState extends State<PsychologistsPage> {
                   fontFamily: 'Montserrat',
                 ),
               ),
-              actions: <Widget>[
-                IconButton(
-                  icon: Icon(Icons.menu),
-                  onPressed: (){},
-                )
-              ],
+              // actions: <Widget>[
+              //   IconButton(
+              //     icon: Icon(Icons.menu),
+              //     onPressed: (){},
+              //   )
+              // ],
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50.0)
               ),

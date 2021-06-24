@@ -1,3 +1,4 @@
+import 'package:PRH/constants/page_classes.dart';
 import 'package:PRH/views/pages/addiction_supports.dart';
 import 'package:PRH/views/pages/court_supports.dart';
 import 'package:PRH/views/pages/emergency_funding.dart';
@@ -58,43 +59,36 @@ class _HomePage3State extends State<HomePage3> {
                   ),
                 ),
               ),
-              ListTile(
-                title: Text(
-                  selectedLanguage,
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold
-                  ),
-                ),
-                trailing: Switch(
-                  value: selectedLanguage == 'English' ? false : true,
-                  activeColor: CustomColors.mainOrange,
-                  activeTrackColor: Colors.white,
-                  inactiveThumbColor: CustomColors.mainBlue ,
-                  inactiveTrackColor: Colors.white,
-                  onChanged: (value) {
-                    setState(() {
-                      changeLanguage();
-                    });
-                  },
-                ),
-                onTap: () {
-                  changeLanguage();
-                },
-                tileColor: selectedLanguage == 'English' ? CustomColors.cardBlue : CustomColors.cardOrange  ,
-              ),
+              // This English to Punjabi Switcher will be added in a later version
+              // ListTile(
+              //   title: Text(
+              //     selectedLanguage,
+              //     textAlign: TextAlign.left,
+              //     style: TextStyle(
+              //       fontWeight: FontWeight.bold
+              //     ),
+              //   ),
+              //   trailing: Switch(
+              //     value: selectedLanguage == 'English' ? false : true,
+              //     activeColor: CustomColors.mainOrange,
+              //     activeTrackColor: Colors.white,
+              //     inactiveThumbColor: CustomColors.mainBlue ,
+              //     inactiveTrackColor: Colors.white,
+              //     onChanged: (value) {
+              //       setState(() {
+              //         changeLanguage();
+              //       });
+              //     },
+              //   ),
+              //   onTap: () {
+              //     changeLanguage();
+              //   },
+              //   tileColor: selectedLanguage == 'English' ? CustomColors.cardBlue : CustomColors.cardOrange  ,
+              // ),
               ListTile(
                 title: Text('Contact Us'),
                 onTap: () {
-                  // Update the state of the app
-                  // ...
-                  // Then close the drawer
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                title: Text('Add a Resource'),
-                onTap: () {
+                  launchURL('https://docs.google.com/forms/d/e/1FAIpQLSc5totzQ7Vdgtgktfz87quasVK8q22S77kVtzoKGeJs3B4tzQ/viewform');
                   // Update the state of the app
                   // ...
                   // Then close the drawer
@@ -161,115 +155,7 @@ class _HomePage3State extends State<HomePage3> {
                 ),
               ),
             ),
-            SliverToBoxAdapter(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.symmetric(vertical: 20),
-                    child: Card(
-                      color: CustomColors.infoCardPinkBeige,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                      child: InkWell(
-                        borderRadius: BorderRadius.circular(20.0),
-                        splashColor: Colors.red[200],
-                        onTap: (){Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => ProfilePage()));
-                        },
-                        child: Container(
-                          width: 100,
-                          height: 100,
-                          child: Center(
-                            child: Text(
-                                'Profile',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: CustomColors.textCharcoalGrey,
-                                fontFamily: 'Montserrat',
-                                letterSpacing: 2,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.symmetric(vertical: 20),
-                    child: Card(
-                      color: CustomColors.infoCardPinkBeige,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                      child: InkWell(
-                        borderRadius: BorderRadius.circular(20.0),
-                        splashColor: Colors.red[200],
-                        onTap: (){Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => TranslatePage()));
-                        },
-                        child: Container(
-                          width: 100,
-                          height: 100,
-                          child: Center(
-                            child: Text(
-                                'Translate',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                letterSpacing: 2,
-                                  color: CustomColors.textCharcoalGrey,
-                                  fontFamily: 'Montserrat',
-                                  fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.symmetric(vertical: 20),
-                    child: Card(
-                      color: CustomColors.infoCardPinkBeige,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                      child: InkWell(
-                        borderRadius: BorderRadius.circular(20.0),
-                        splashColor: Colors.red[200],
-                        onTap: (){Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => ResourcePage()));
-                        },
-                        child: Container(
-                          width: 100,
-                          height: 100,
-                          child: Center(
-                            child: Text(
-                              'Definition + Resources',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                letterSpacing: 2,
-                                color: CustomColors.textCharcoalGrey,
-                                fontFamily: 'Montserrat',
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+
 
 
 
@@ -682,9 +568,8 @@ class _HomePage3State extends State<HomePage3> {
                       child: InkWell(
                         borderRadius: BorderRadius.circular(20.0),
                         splashColor: Colors.red[200],
-                        onTap: (){Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => IntroPage()));
+                        onTap: (){
+                          launchURL('https://docs.google.com/forms/d/e/1FAIpQLSc5totzQ7Vdgtgktfz87quasVK8q22S77kVtzoKGeJs3B4tzQ/viewform');
                         },
                         child: Container(
                           width: 100,
@@ -728,54 +613,105 @@ class _HomePage3State extends State<HomePage3> {
               child: Container(
                 padding: const EdgeInsets.symmetric(vertical: 25),
                 color: CustomColors.homePageFooterBlue,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
-                        Text(
-                          'Compilation',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Montserrat',
-                          ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Text(
+                              'App Development',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                            Text(
+                              'Muhammad Abdullah',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                          ],
                         ),
-                        Text(
-                          'Simran K. Dhillon',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Montserrat',
-                          ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Text(
+                              'App Design',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Montserrat'
+                              ),
+                            ),
+                            Text(
+                              'Hannah Tellambura',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                    SizedBox(height: 40,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
-                        Text(
-                          'Additional Credits',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Montserrat'
-                          ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Text(
+                              'Compilation',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                            Text(
+                              'Simran K. Dhillon',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                          ],
                         ),
-                        Text(
-                          'Ravia K. Dhaliwal',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                        Text(
-                          'Daman K. Grewal',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Montserrat',
-                          ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Text(
+                              'Additional Credits',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Montserrat'
+                              ),
+                            ),
+                            Text(
+                              'Ravia K. Dhaliwal',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                            Text(
+                              'Daman K. Grewal',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -783,6 +719,8 @@ class _HomePage3State extends State<HomePage3> {
                 ),
               ),
             ),
+
+
           ],
         ),
       ),

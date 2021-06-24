@@ -64,12 +64,12 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
                     fontFamily: 'Montserrat',
                   ),
                 ),
-                actions: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.menu),
-                    onPressed: (){},
-                  )
-                ],
+                // actions: <Widget>[
+                //   IconButton(
+                //     icon: Icon(Icons.menu),
+                //     onPressed: (){},
+                //   )
+                // ],
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50.0)
                 ),
@@ -480,7 +480,7 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
                                   Text(
-                                    "     Outpatient Counselling Services, Adult",
+                                    "     Outpatient Counselling Services",
                                     style: TextStyle(
                                         fontFamily: 'Montserrat',
                                         fontSize: 14,
@@ -1393,7 +1393,7 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
                                   Text(
-                                    "     Outpatient Counselling Services, Youth",
+                                    "     Youth Counselling Services",
                                     style: TextStyle(
                                         fontFamily: 'Montserrat',
                                         fontSize: 14,
@@ -1431,7 +1431,7 @@ class _AddictionSupportsPageState extends State<AddictionSupportsPage> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
                                   Text(
-                                    "     Outpatient Counselling Services, Adult",
+                                    "     Adult Counselling Services",
                                     style: TextStyle(
                                         fontFamily: 'Montserrat',
                                         fontSize: 14,

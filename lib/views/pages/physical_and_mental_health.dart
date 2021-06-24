@@ -40,12 +40,12 @@ class _PhysicalAndMentalHealthPageState extends State<PhysicalAndMentalHealthPag
                   fontFamily: 'Montserrat',
                 ),
               ),
-              actions: <Widget>[
-                IconButton(
-                  icon: Icon(Icons.menu),
-                  onPressed: (){},
-                )
-              ],
+              // actions: <Widget>[
+              //   IconButton(
+              //     icon: Icon(Icons.menu),
+              //     onPressed: (){},
+              //   )
+              // ],
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50.0)
               ),
@@ -76,7 +76,7 @@ class _PhysicalAndMentalHealthPageState extends State<PhysicalAndMentalHealthPag
                           ),
                           SizedBox(height:15 ,),
                           Text(
-                            'Addiction to substances such as drugs and alcohol is present when one is  psychologically or physically dependent on such substance. Problematic substance use happens when someone uses drugs or alcohol that negatively impacts their health and life.',
+                            'Physical Health is defined as the normal functioning of the body at all levels. Good physical health is achieved through a combination of proper diet, exercise, and self-care.',
                             style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontSize: 14,
@@ -113,7 +113,7 @@ class _PhysicalAndMentalHealthPageState extends State<PhysicalAndMentalHealthPag
                           ),
                           SizedBox(height:15 ,),
                           Text(
-                            'Addiction to substances such as drugs and alcohol is present when one is  psychologically or physically dependent on such substance. Problematic substance use happens when someone uses drugs or alcohol that negatively impacts their health and life.',
+                            "Mental Health is an individual's condition with regard to their psychological and emotional well-being. One's mental health can often have a large effect on their physical health. Mental Health is equally important as physical health. ",
                             style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontSize: 14,

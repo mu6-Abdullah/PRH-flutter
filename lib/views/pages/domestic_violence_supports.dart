@@ -43,12 +43,12 @@ class _DomesticViolenceSupportsPageState extends State<DomesticViolenceSupportsP
                   fontFamily: 'Montserrat',
                 ),
               ),
-              actions: <Widget>[
-                IconButton(
-                  icon: Icon(Icons.menu),
-                  onPressed: (){},
-                )
-              ],
+              // actions: <Widget>[
+              //   IconButton(
+              //     icon: Icon(Icons.menu),
+              //     onPressed: (){},
+              //   )
+              // ],
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50.0)
               ),
