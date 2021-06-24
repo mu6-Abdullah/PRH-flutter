@@ -27,31 +27,31 @@ class _IntroPageState extends State<IntroPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              ElevatedButton(
-                onPressed: () {Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomePage3()));},
-                style: ElevatedButton.styleFrom(
-                  primary: CustomColors.mainOrange,
-                ),
-                child: Container(
-                  width: 100,
-                  height: 50,
-                  child: Center(
-                    child: Text(
-                        'ਪੰਜਾਬੀ',
-                        style: TextStyle(
-                          color: CustomColors.textCharcoalGrey,
-                          fontFamily: 'Montserrat',
-                          letterSpacing: 2,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(width: 30,),
+              // ElevatedButton(
+              //   onPressed: () {Navigator.pushReplacement(
+              //       context,
+              //       MaterialPageRoute(builder: (context) => HomePage3()));},
+              //   style: ElevatedButton.styleFrom(
+              //     primary: CustomColors.mainOrange,
+              //   ),
+              //   child: Container(
+              //     width: 100,
+              //     height: 50,
+              //     child: Center(
+              //       child: Text(
+              //           'ਪੰਜਾਬੀ',
+              //           style: TextStyle(
+              //             color: CustomColors.textCharcoalGrey,
+              //             fontFamily: 'Montserrat',
+              //             letterSpacing: 2,
+              //             fontSize: 18,
+              //             fontWeight: FontWeight.bold,
+              //             ),
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              // SizedBox(width: 30,),
               ElevatedButton(
                 onPressed: () {Navigator.pushReplacement(
                     context,
